@@ -9,17 +9,19 @@
     --bg-button-hover: #4133B7;
     --bg-badge: #bed6fb;
     --text-color: #697e91;
-    --text-color-bold: #425275;
+    --text-color-bold: #425675;
     --icon-color: #1FCAC5;
     /* font */
     --font-family: "Montserrat", sans-serif;
     --font-size: 16px;
+    --font-size-title: 1.25rem;
     --line-height: 24px;
     /* sizes */
     --body-p: 20px;
     --card-width: 300px;
     --card-external-p: 10px;
     --card-internal-p: 20px;
+    --card-internal-tp: 40px;
     --card-border-radius: 16px;
     --card-section-mt: 0.75rem;
     --badge-p: 0.625em 0.75em;
