@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+body {
+   background-color: var(--bg-body);
+   padding: var(--body-p);
+   display: flex;
+   justify-content: center;
+}

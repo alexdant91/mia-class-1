@@ -1,0 +1,25 @@
+.card-plane {
+    background-color: var(--bg-secondary);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-external-p);
+    width: var(--card-width);
+    box-shadow: var(--card-shadow);
+}
+
+.card-plane .card-plane__container {
+   background-color: var(--bg-primary);
+   border-top-left-radius: var(--card-border-radius);
+   border-bottom-left-radius: var(--card-border-radius);
+   border-bottom-right-radius: var(--card-border-radius);
+   padding: var(--card-internal-p);
+   position: relative;
+}
+
+.card-plane .card-plane__container .card-plane__badge {
+    background-color: var(--bg-badge);
+    padding: var(--badge-p);
+    border-radius: var(--badge-border-radius);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
