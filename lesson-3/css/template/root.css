@@ -11,11 +11,13 @@
     --text-color: #697e91;
     --text-color-bold: #425675;
     --icon-color: #1FCAC5;
+    --card-button-color: #fff;
     /* font */
     --font-family: "Montserrat", sans-serif;
     --font-size: 16px;
     --font-size-title: 1.25rem;
     --line-height: 24px;
+    --card-button-font-size: 1.125rem;
     /* sizes */
     --body-p: 20px;
     --card-width: 300px;
@@ -24,8 +26,13 @@
     --card-internal-tp: 40px;
     --card-border-radius: 16px;
     --card-section-mt: 0.75rem;
+    --card-list-mt: 0.75rem;
     --badge-p: 0.625em 0.75em;
+    --card-button: 0.625em 0.75em;
     --badge-border-radius: 99em 0 0 99em;
+    --card-button-border-radius: 6px;
+    --card-button-w: 100%;
+    --card-button-h: 50px;
     /* shadow */
     --card-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
 }
