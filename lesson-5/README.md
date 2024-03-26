@@ -8,6 +8,6 @@
     - [x] featured_products
 3. Ivan:
     - [x] purchase_online
-    - [ ] from_the_blog
+    - [x] from_the_blog
 4. Federico
-    - [ ] footer
+    - [x] footer
