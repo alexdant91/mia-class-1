@@ -1,13 +1,13 @@
 # TODO
 
 1. Sabrina:
-    - navbar
-    - hero
-    - section_1
+    - [x] navbar
+    - [ ] hero
+    - [ ] section_1
 2. Alex:
-    - featured_products
+    - [ ] featured_products
 3. Ivan:
-    - purchase_online
-    - from_the_blog
+    - [ ] purchase_online
+    - [ ] from_the_blog
 4. Federico
-    - footer
+    - [ ] footer
