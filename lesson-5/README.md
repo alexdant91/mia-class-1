@@ -2,8 +2,8 @@
 
 1. Sabrina:
     - [x] navbar
-    - [ ] hero
-    - [ ] section_1
+    - [x] hero
+    - [x] section_1
 2. Alex:
     - [ ] featured_products
 3. Ivan:
