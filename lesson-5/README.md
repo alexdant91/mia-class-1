@@ -5,9 +5,9 @@
     - [x] hero
     - [x] section_1
 2. Alex:
-    - [ ] featured_products
+    - [x] featured_products
 3. Ivan:
-    - [ ] purchase_online
+    - [x] purchase_online
     - [ ] from_the_blog
 4. Federico
     - [ ] footer
