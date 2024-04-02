@@ -5,14 +5,14 @@ First HTML project [here](https://themewagon.github.io/jadoo/v1.0.0/).
 ## Work
 
 1. Alex
-    - [ ] Navbar
-    - [ ] Header
+    - [x] Navbar
+    - [x] Header
 2. Ivan
-    - [ ] Section 1
-    - [ ] Section 2
+    - [x] Section 1
+    - [x] Section 2
 3. Federico
-    - [ ] Section 3
-    - [ ] Section 4
+    - [x] Section 3
+    - [x] Section 4
 4. Sabrina
-    - [ ] Banner
-    - [ ] Footer
+    - [x] Banner
+    - [x] Footer
