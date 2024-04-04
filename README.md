@@ -5,7 +5,7 @@ HTML project landing [here](https://preview.cruip.com/gray/).
 ## Work
 
 1. Alex
-    - [ ] repeating Code
+    - [ ] repeating code
 2. Ivan
     - [ ] header
     - [ ] footer
