@@ -1,0 +1,7 @@
+.btn-primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--btn-p);
+    border-radius: var(--btn-border-radius);
+    border: var(--btn-border);
+}

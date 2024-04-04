@@ -1,0 +1,27 @@
+nav{
+    height: var(--nav-h);
+    padding: var(--nav-p);
+}
+
+nav .nav__center{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+nav .nav__left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .nav__left .nav__left-logo-name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav .nav__right{
+    display: flex;
+    align-items: center;
+}
