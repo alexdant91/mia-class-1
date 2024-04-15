@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-text);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > .row { 
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-title);
+}
+
+button.btn__primary {
+    width: auto;
+    background-color: var(--color-primary);
+    color: var(--color-btn-text-primary);  
+}
+
+button.btn__secondary {
+    width: auto;
+    background-color: var(--color-secondary);
+    color: var(--color-btn-text-secondary);  
+}
+
+button.btn__full {
+    width: 100% !important; 
+}

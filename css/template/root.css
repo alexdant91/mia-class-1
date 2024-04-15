@@ -1,3 +1,19 @@
-:root{
-    
+:root {
+    /* COLORS */
+    --color-primary: #18181b;
+    --color-secondary: #71717a;
+    --color-inverse: #fafafa;
+    --color-btn-text-primary: #f4f4f5;
+    --color-btn-text-secondary: #18181b;
+    --color-accent: #a78bfa;
+    /* SIZES */
+    --max-width: 1180px;
+    --padding-y-section: 5rem;
+    /* FONTS */
+    --font-family-title: "Inter Tight", sans-serif;
+    --font-family-text: "Inter", sans-serif;
+    --font-weight-title: 700;
+    --font-weight-text: 400;
+    --font-size-title: 40px;
+    --font-size-text: 18px;
 }
