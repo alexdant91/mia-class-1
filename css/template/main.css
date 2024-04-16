@@ -7,6 +7,10 @@
     font-weight: var(--font-weight-text);
 }
 
+p {
+    line-height: var(--font-line-height-general);
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -19,10 +23,31 @@
     max-width: var(--max-width);
 }
 
+.section {
+    padding: var(--padding-y-section) 0;
+}
+
+.box {
+    margin-bottom: var(--margin-b-box);
+}
+
 .title {
     font-family: var(--font-family-title);
     font-size: var(--font-size-title);
     font-weight: var(--font-weight-title);
+}
+
+h4.title {
+    font-size: var(--font-size-title-h4);
+    font-weight: var(--font-weight-title);
+    line-height: var(--font-line-height-title-h4);
+}
+
+button {
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-colored: 0 1px 3px 0 var(--shadow-color), 0 1px 2px -1px var(--shadow-color);
+    box-shadow: var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow);
+    border: none;
 }
 
 button.btn__primary {
@@ -36,8 +61,11 @@ button.btn__primary {
 
 button.btn__secondary {
     width: auto;
-    background-color: var(--color-secondary);
-    color: var(--color-btn-text-secondary);  
+    background-color: var(--color-btn-secondary);
+    color: var(--color-btn-text-secondary);
+    font-size: var(--font-size-btn);
+    padding: var(--padding-btn);
+    border-radius: var(--border-radius-btn); 
 }
 
 button.btn__full {
