@@ -1,0 +1,31 @@
+#section1 {
+  background-color: #fafafa;
+  flex-direction: column;
+  padding-left: var(--padding-left-section);
+  padding-right: var(--padding-right-section);
+}
+
+button.btn__section1 {
+  text-align: left;
+  opacity: 0.6;
+  padding: var(--padding-btn-section1);
+}
+
+.btn__section1:hover {
+  border-color: var(--color-tertiary);
+  border: 1px solid var(--color-primary);
+  opacity: 1;
+  cursor: pointer;
+  background-color: #fafafa;
+}
+
+.wrapper {
+  gap: 24px;
+}
+
+.title__card-section-1 {
+  font-weight: var(--font-weight-title);
+}
+div img {
+  border-radius: 10%;
+}
