@@ -28,7 +28,10 @@
 button.btn__primary {
     width: auto;
     background-color: var(--color-primary);
-    color: var(--color-btn-text-primary);  
+    color: var(--color-btn-text-primary);
+    font-size: var(--font-size-btn);
+    padding: var(--padding-btn);
+    border-radius: var(--border-radius-btn);
 }
 
 button.btn__secondary {
