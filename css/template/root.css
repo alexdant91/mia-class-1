@@ -10,6 +10,9 @@
     --color-accent: #a78bfa;
     --color-bg-nav-wrapper: #ffffff;
     --color-border-nav-wrapper: #D6D6DA;
+    --color-section-6-partners: #f1f1f1;
+    --color-border-section-6-partners: #cdcdd1;
+    --fill-svg: #a1a1aa;
     /* SIZES */
     --max-width: 1180px;
     --padding-y-section: 5rem;
@@ -21,6 +24,9 @@
     --padding-nav-wrapper: 0.75rem;
     --padding-btn: 0.5rem 1rem;
     --padding-btn-section1: 1rem;
+    --padding-small-img: 0.9rem;
+    --padding-top-section6-wrapper: 2rem;
+    --padding-section-6-partners: 1rem;
     --border-radius-nav-wrapper: 0.5rem;
     --border-radius-nav-wrapper-btn: 0.25rem;
     --border-radius-btn: 0.375rem;
