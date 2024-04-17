@@ -28,3 +28,7 @@
 .text-left{
     text-align: left;
 }
+
+.gap-lg {
+    gap: 6rem;
+}
