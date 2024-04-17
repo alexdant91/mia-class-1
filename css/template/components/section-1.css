@@ -5,13 +5,13 @@
   padding-right: var(--padding-right-section);
 }
 
-button.btn__section1 {
+#section1 button.btn__section1 {
   text-align: left;
   opacity: 0.6;
   padding: var(--padding-btn-section1);
 }
 
-.btn__section1:hover {
+#section1 .btn__section1:hover {
   border-color: var(--color-tertiary);
   border: 1px solid var(--color-primary);
   opacity: 1;
@@ -19,13 +19,14 @@ button.btn__section1 {
   background-color: #fafafa;
 }
 
-.wrapper {
+#section1 .wrapper {
   gap: 24px;
+  margin: 3rem 0 5rem 0;
 }
 
-.title__card-section-1 {
+#section1 .title__card-section-1 {
   font-weight: var(--font-weight-title);
 }
-div img {
+#section1 div img {
   border-radius: 10%;
 }
