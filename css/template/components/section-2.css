@@ -1,0 +1,17 @@
+#h3section2 {
+    color: black;
+    font-weight: 600;
+    font-family: Inter Tight, sans-serif;
+}
+
+.bordercards {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.spacebetween {
+    padding: 15px;
+}
