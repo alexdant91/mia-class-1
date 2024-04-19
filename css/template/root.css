@@ -10,18 +10,29 @@
     --color-accent: #a78bfa;
     --color-bg-nav-wrapper: #ffffff;
     --color-border-nav-wrapper: #D6D6DA;
+    --color-section-6-partners: #f1f1f1;
+    --color-border-section-6-partners: #cdcdd1;
+    --fill-svg: #9b9b9d;
     /* SIZES */
     --max-width: 1180px;
     --padding-y-section: 5rem;
     --max-width-nav-wrapper: 768px;
+    --max-width-title-p-wrapper: 768px;
     --margin-nav-wrapper: 1.5rem;
+    --padding-left-section: 1rem;
+    --padding-right-section: 1rem;
     --padding-nav-wrapper: 0.75rem;
     --padding-btn: 0.5rem 1rem;
+    --padding-btn-section1: 1rem;
+    --padding-small-img: 0.9rem;
+    --padding-top-section6-wrapper: 2rem;
+    --padding-section-6-partners: 1rem;
     --border-radius-nav-wrapper: 0.5rem;
     --border-radius-nav-wrapper-btn: 0.25rem;
     --border-radius-btn: 0.375rem;
     --border-width-nav-wrapper: 10px;
     --margin-b-box: 2rem;
+    --margin-p: 1rem;
     /* FONTS */
     --font-family-title: "Inter Tight", sans-serif;
     --font-family-text: "Inter", sans-serif;
@@ -29,13 +40,16 @@
     --font-weight-text: 400;
     --font-weight-a-navbar: 500;
     --font-size-title: 3.25rem;
+    --font-size-title-h2: 2.5rem;
     --font-size-title-h4: 2rem;
     --font-line-height-title: 1.2;
+    --font-line-height-title-h2: 1.25;
     --font-line-height-title-h4: 1.3;
     --font-size-text: 16px;
     --font-size-nav: 14px;
     --font-size-btn: 14px;
     --font-line-height-general: 1.5;
+    --letter-spacing-title-h2: -0.017em;
     /* SHADOWS */
     --ring-offset-shadow: 0 0 #0000;
     --ring-shadow: 0 0 #0000;

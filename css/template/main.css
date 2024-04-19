@@ -11,6 +11,11 @@ p {
     line-height: var(--font-line-height-general);
 }
 
+p.max-width-p {
+    max-width: var(--max-width-title-p-wrapper);
+    color:var(--color-secondary);
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -35,6 +40,12 @@ p {
     font-family: var(--font-family-title);
     font-size: var(--font-size-title);
     font-weight: var(--font-weight-title);
+}
+h2.title {
+    font-size: var(--font-size-title-h2);
+    line-height: var(--font-line-height-title-h2);
+    letter-spacing: var(--letter-spacing-title-h2);
+    margin-bottom:var(--margin-p);
 }
 
 h4.title {
@@ -70,4 +81,18 @@ button.btn__secondary {
 
 button.btn__full {
     width: 100% !important; 
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4 {
+    color: var(--color-inverse);
+}
+
+.bg-primary p {
+    color: var(--color-secondary);
 }
