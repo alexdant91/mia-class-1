@@ -32,3 +32,11 @@
 .gap-lg {
     gap: 6rem;
 }
+
+.gap-xs {
+    gap: 0.5rem;
+}
+
+.mt-lg {
+    margin-top: 5rem;
+}
