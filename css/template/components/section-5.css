@@ -1,0 +1,89 @@
+#section5 {
+    background-color: var(--color-bg-section-5);
+    color: var(--color-secondary);
+    overflow: hidden;
+}
+
+#section5 .section__title {
+    max-width: var(--max-width-title-section-5);
+    margin-bottom: var(--padding-y-section);
+    color: var(--color-section-5);
+}
+
+#section5 .section__title h2 {
+    font-size: var(--font-size-title-h2);
+    font-weight: var(--font-weight-title);
+}
+
+#section5 .wrapper-slides {
+    mask-image: linear-gradient(to right, transparent 0, black 28%, black calc(100% - 28%), transparent 100%);
+}
+
+#section5 .slides-to-left .slide,
+#section5 .slides-to-right .slide {
+    background: linear-gradient(#323237, #323237) padding-box, linear-gradient(120deg, #3f3f46, rgb(63 63 70 / 0), #3f3f46) border-box;
+    padding: 1.25rem;
+    border-color: transparent;
+    border-width: 1px;
+    border-radius: 0.25rem;
+}
+
+#section5 .slides-to-left .slide .slide__top,
+#section5 .slides-to-right .slide .slide__top {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#section5 .slides-to-left .slide .slide__top .slide__top-title h4,
+#section5 .slides-to-right .slide .slide__top .slide__top-title h4 {
+    color: var(--color-section-5);
+    margin-bottom: 0.25rem;
+}
+
+#section5 .slides-to-left .slide .slide__top .slide__top-title span, 
+#section5 .slides-to-right .slide .slide__top .slide__top-title span {
+    font-size: var(--font-size-nav);
+}
+
+#section5 .slides-to-left .slide .slide__top .slide__top-img img,
+#section5 .slides-to-right .slide .slide__top .slide__top-img img{
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+#section5 .slides-to-left,
+#section5 .slides-to-right {
+    margin-bottom: 1.5rem;
+    gap: 1.6rem;
+}
+
+#section5 .slides-to-left {
+    animation: infinite-scroll 60s linear infinite;
+}
+
+@keyframes infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#section5 .slides-to-right {
+    animation: infinite-scroll-inverse 60s linear infinite;
+}
+
+@keyframes infinite-scroll-inverse {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+#section5 .slides-to-left:hover,
+#section5 .slides-to-right:hover{
+    animation-play-state: paused;
+}

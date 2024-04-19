@@ -9,7 +9,9 @@
     --color-btn-secondary: #ffffff;
     --color-accent: #a78bfa;
     --color-bg-nav-wrapper: #ffffff;
+    --color-bg-section-5: #27272a;
     --color-border-nav-wrapper: #D6D6DA;
+    --color-section-5: #e4e4e6;
     --color-section-6-partners: #f1f1f1;
     --color-border-section-6-partners: #cdcdd1;
     --fill-svg: #9b9b9d;
@@ -18,6 +20,7 @@
     --padding-y-section: 5rem;
     --max-width-nav-wrapper: 768px;
     --max-width-title-p-wrapper: 768px;
+    --max-width-title-section-5: 768px;
     --margin-nav-wrapper: 1.5rem;
     --padding-left-section: 1rem;
     --padding-right-section: 1rem;
