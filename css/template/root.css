@@ -1,6 +1,20 @@
 :root{
 
+    /* COLORS */
+    --color-primary: #DA392B;
+    --color-secondary: #272443;
+    --color-tertiary:#FCFF72;
+
+    /* SIZEs */
+    --font-size: 18px;
     --max-width: 1480px;
+
+
+    /* FONTS */
+    --font-family-title: "Suez One", serif;
+    --font-family-text: "Roboto", sans-serif, 
+
+    /* SHADOWS */
     
 }
 
