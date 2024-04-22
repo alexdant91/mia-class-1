@@ -2,9 +2,9 @@
 @import url(./template/main.css);
 @import url(./template/utility.css);
 
-@import url(./template/components/carriere.css);
-@import url(./template/components/chisiamo.css);
-@import url(./template/components/footer.css);
-@import url(./template/components/homepage.css);
-@import url(./template/components/kipon.css);
-@import url(./template/components/navbar.css);
+@import url(./components/carriere.css);
+@import url(./components/chisiamo.css);
+@import url(./components/footer.css);
+@import url(./components/homepage.css);
+@import url(./components/kipon.css);
+@import url(./components/navbar.css);
