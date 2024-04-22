@@ -1,0 +1,10 @@
+@import url(./template/main.css);
+@import url(./template/root.css);
+@import url(./template/utility.css);
+
+@import url(./template/components/carriere.css);
+@import url(./template/components/chisiamo.css);
+@import url(./template/components/footer.css);
+@import url(./template/components/homepage.css);
+@import url(./template/components/kipon.css);
+@import url(./template/components/navbar.css);

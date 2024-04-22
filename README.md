@@ -1,3 +1,7 @@
-# Mia Class 1 General repo
+HOMEPAGE - FEDERICO [ ]
 
-This is the general repo for all Mia Academy class 1 projects and lessons.
+NAVBAR ; FOOTER - IVAN [ ]
+
+GIOCHI(KIPON) - SABRINA [ ]
+
+CHI SIAMO ; CARRIERE ALEX [ ]
