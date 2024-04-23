@@ -1,0 +1,22 @@
+nav {
+    background-color: #eeee;
+}
+
+.navbar__right {
+    gap: 4rem;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #eeee;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
