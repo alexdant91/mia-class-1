@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -15,3 +15,16 @@
     width: 100%;
     max-width: var(--max-width);
 }
+
+.logo a {
+    font-family: var(--font-family-logo);
+    font-size: var(--font-size-logo);
+    color: var(--color-logo);
+    background-color: var(--color-primary);
+    display: inline-block;
+    padding: var(--padding-logo);
+    border-bottom-right-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+
+

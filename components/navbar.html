@@ -16,36 +16,36 @@
             <div class="row">
                 <div class="navbar flex justify-between">
                     <div class="navbar__left">
-                        <p>
+                        <div class="logo">
                             <a href="/">Tripo Games</a>
-                        </p>
+                        </div>
                     </div>
                     <div class="navbar__right flex">    
-                        <div class="navbar__right-home">
-                            <a href="/">Home</a>
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link active" href="/">Home</a>
                         </div>
-                        <div class="navbar__right-games dropdown">
-                            Giochi
+                        <div class="navbar__right-item dropdown">
+                            <span>Giochi</span>
                             <div class="dropdown-menu">
-                                <div class="navbar__right-games-kipon">
-                                    <a href="/kipon.html">Kipon</a>
+                                <div class="dropdown-menu__item">
+                                    <a class="navbar__right-item-link" href="/kipon.html">Kipon</a>
                                 </div>
-                                <div class="navbar__right-games-robotrix">
-                                    <a href="/robotrix.html">Robotrix</a>
+                                <div class="dropdown-menu__item">
+                                    <a class="navbar__right-item-link" href="/robotrix.html">Robotrix</a>
                                 </div>
-                                <div class="navbar__right-games-treasure">
-                                    <a href="/treasure.html">Treasure box</a>
+                                <div class="dropdown-menu__item">
+                                    <a class="navbar__right-item-link" href="#">Treasure box</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="navbar__right-careers">
-                            <a href="/careers.html">Carriere</a>
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link" href="#">Carriere</a>
                         </div>
-                        <div class="navbar__right-about">
-                            <a href="/about.html">Chi siamo</a>
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link" href="#">Chi siamo</a>
                         </div>
-                        <div class="navbar__right-contacts">
-                            <a href="#contacts">Contatti</a>
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link" href="#contacts">Contatti</a>
                         </div>                      
                     </div>
                 </div>
@@ -53,4 +53,15 @@
         </div>
     </nav>
 </body>
+<script>
+    const navLinkEls = document.querySelectorAll(".navbar__right-item-link");
+    // console.log(navLinkEls);
+    navLinkEls.forEach( navLinkEl => {
+        // console.log(navLinkEl);
+        navLinkEl.addEventListener("click", () => {
+            document.querySelector(".active").classList.remove("active");
+            navLinkEl.classList.add("active");
+        })
+    })
+</script>
 </html>
