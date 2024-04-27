@@ -46,6 +46,10 @@ footer .footer__center .footer__center-item .footer__center-item-content-info sp
     line-height: 2;
 }
 
+footer .footer__center .footer__center-item .footer__center-item-content a:first-child img {
+    margin-bottom: 1rem;
+}
+
 footer .footer__bottom {
     padding: 4rem 0; 
 }
