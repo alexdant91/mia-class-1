@@ -52,16 +52,16 @@
             </div>
         </div>
     </nav>
-</body>
-<script>
-    const navLinkEls = document.querySelectorAll(".navbar__right-item-link");
-    // console.log(navLinkEls);
-    navLinkEls.forEach( navLinkEl => {
-        // console.log(navLinkEl);
-        navLinkEl.addEventListener("click", () => {
-            document.querySelector(".active").classList.remove("active");
-            navLinkEl.classList.add("active");
+    <script>
+        const navLinkEls = document.querySelectorAll(".navbar__right-item-link");
+        // console.log(navLinkEls);
+        navLinkEls.forEach( navLinkEl => {
+            // console.log(navLinkEl);
+            navLinkEl.addEventListener("click", () => {
+                document.querySelector(".active").classList.remove("active");
+                navLinkEl.classList.add("active");
+            })
         })
-    })
-</script>
+    </script>
+</body>
 </html>
