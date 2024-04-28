@@ -6,12 +6,16 @@
     --color-tertiary:#FCFF72;
     --color-logo: #ffffff;
     --color-nav-active: #ffffff;
+    --color-footer: #757575;
+    --color-bg: #f6f4f0;
+    --color-border-footer: #403e58;
 
     /* SIZEs */
     --font-size: 18px;
     --font-size-logo: 1.7rem;
     --max-width: 1480px;
     --padding-logo: 1rem 1.5rem;
+    --max-width-footer: 1140px;
 
 
     /* FONTS */

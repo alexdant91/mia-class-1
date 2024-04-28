@@ -20,7 +20,10 @@
 
 .justify-between {
     justify-content: space-between;
-}.zoomelement {
+}
+
+/* ZOOM-IN ELEMENT */
+.zoomelement {
     margin: 50px;
     
     overflow: hidden;
