@@ -1,18 +1,39 @@
 /* ZOOM-IN ELEMENT */
 .zoomelement {
     margin: 50px;
-    width: 200px;
-    height: 200px;
+    
     overflow: hidden;
 }
 
 .zoomelement img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     transition: transform 800ms;
 }
 
 .zoomelement:hover img {
     transform: scale(1.06);
+}
+
+.button__style-1 {
+    width: 130px;
+    height: 60px;
+    border-radius: 0.8rem;
+    border-color: transparent;
+    background-color: #DA392B;
+    cursor: pointer;
+}
+
+.button__style-1:hover {
+    border:1px solid black;
+    background-color: aliceblue;
+    transition: all 600ms;
+}
+
+#p_button-1 {
+    color: rgb(255, 255, 255);
+}
+/* creare una classe id apposita per impostare il colore che serve a voi*/
+#p_button-1:hover {
+    color: rgb(0, 0, 0);
+    transition: all 600ms;
 }
