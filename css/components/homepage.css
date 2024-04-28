@@ -3,15 +3,16 @@ header {
   background-image: url("https://static.wixstatic.com/media/c837a6_aa803204cef842e0b9ad7d820e64f77c~mv2.jpg/v1/fill/w_2016,h_800,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_aa803204cef842e0b9ad7d820e64f77c~mv2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   height: 90vh;
+  background-attachment: fixed;
 }
 
 .padding_top {
   padding-top: 10px;
 }
 
-.row > div {
+header .row > div {
   transform: translateY(150%);
 }
 
@@ -26,17 +27,91 @@ p {
   color: var(--color-secondary);
   font-size: 24px;
 }
-.store__button-1 {
-  width: 135px;
-  height: 44px;
+
+.padding_top > a {
+  margin-right: 15px;
 }
 
-.store__button-2 {
-    width: 153px;
-    height: 44px;
-  }
+.card_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -125px;
+}
+.card__section-1 {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 21px;
+  width: 350px;
+  height: 443.63335px;
+  border-radius: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(218, 57, 43, 0),
+    rgba(218, 57, 43, 1)
+  );
+  position: relative;
+}
 
-div > a{
-    margin-right: 15px;
+.card__section-1:hover img {
+  opacity: 1;
+}
+
+.card__section-1 img {
+  width: 350px;
+  height: 443.63335px;
+  opacity: 0.8;
+}
+
+#card__header-4 {
+  font-size: 30px;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(232, 253, 0);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+/* NON VA L'HOVER DELLA QUARTA CARD
+#card__header-4:hover{
+  background-color:  rgb(232, 253, 0);
+  font-size: 30px;
+   background: linear-gradient(
+    180deg,
+    rgba(218, 57, 43, 0),
+    rgba(218, 57, 43, 0)
+  );
+}
+*/
+
+
+
+
+
+
+.card__section-1 div {
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+} 
+
+.card__section-1 div p {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.card__section-1:hover div {
+  opacity: 0;
 }
 

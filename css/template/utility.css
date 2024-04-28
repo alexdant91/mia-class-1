@@ -1,14 +1,9 @@
 /* ZOOM-IN ELEMENT */
 .zoomelement {
-    margin: 50px;
-    width: 200px;
-    height: 200px;
     overflow: hidden;
 }
 
 .zoomelement img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     transition: transform 800ms;
 }
