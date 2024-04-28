@@ -1,6 +1,6 @@
 footer {
     font-family: var(--font-family-text);
-    background-color: var(--color-bg-footer);
+    background-color: var(--color-bg);
 }
 
 footer .footer__top,
