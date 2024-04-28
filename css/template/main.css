@@ -23,6 +23,7 @@
     background-color: var(--color-primary);
     display: inline-block;
     padding: var(--padding-logo);
+    text-decoration: none;
     border-bottom-right-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem;
 }
