@@ -16,13 +16,13 @@ header .row > div {
   transform: translateY(150%);
 }
 
-h1 {
+#h_title {
   font-family: var(--font-family-title);
   font-size: 80px;
   color: var(--color-secondary);
   line-height: 1.2em;
 }
-p {
+#p_title {
   font-family: var(--font-family-text);
   color: var(--color-secondary);
   font-size: 24px;
@@ -41,7 +41,7 @@ p {
   color: #ffffff;
   font-family: sans-serif;
   font-size: 21px;
-  width: 350px;
+  width: 400px;
   height: 443.63335px;
   border-radius: 1rem;
   background: linear-gradient(
@@ -59,7 +59,7 @@ p {
 .card__section-1 img {
   width: 350px;
   height: 443.63335px;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 #card__header-4 {
@@ -71,13 +71,14 @@ p {
   align-items: center;
   background-color: rgb(232, 253, 0);
   text-decoration: none;
+  transform: translate(50px, 50px);
+  transition: all 800ms;
 }
 
-
-
-
-
-
+#card__header-4:hover {
+  background: rgb(232, 253, 0);
+  font-size: 35px;
+}
 
 /* NON VA L'HOVER DELLA QUARTA CARD
 #card__header-4:hover{
@@ -91,11 +92,6 @@ p {
 }
 */
 
-
-
-
-
-
 .card__section-1 div {
   font-family: sans-serif;
   position: absolute;
@@ -103,7 +99,7 @@ p {
   left: 30px;
   opacity: 1;
   transition: opacity 0.3s ease;
-} 
+}
 
 .card__section-1 div p {
   color: #ffffff;
@@ -115,3 +111,60 @@ p {
   opacity: 0;
 }
 
+.text__container-section-2 {
+  margin: 0 auto;
+  max-width: 750px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h__section-2 {
+  margin: 20px 0;
+  font-family: var(--font-family-title);
+  font-size: 55px;
+  color: var(--color-secondary);
+}
+.p__section-2 {
+  margin: 20px 0;
+  font-family: var(--font-family-text);
+  color: var(--color-secondary);
+  letter-spacing: 0.8px;
+}
+
+#p-1_section {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+#p-2_section {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 50px 0;
+}
+.button__style-1-position {
+  margin: 50px 0;
+}
+
+#work_img-1 {
+  border-radius: 1rem;
+}
+#work_img-1:hover {
+  /*background: linear-gradient(
+    180deg,
+    rgba(218, 57, 43, 0),
+    rgba(218, 57, 43, 1)
+  );*/
+    filter: brightness(50%) sepia(1) hue-rotate(-10deg) saturate(1000%)
+    contrast(0.8);
+    transition: all 800ms;
+}
+
+#section_2-img-2{
+  width: 250px;
+  height: 280px;
+  margin-top: -200px;
+  margin-left: -125px;
+}
