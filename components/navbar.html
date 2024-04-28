@@ -8,9 +8,60 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="navbar flex justify-between">
+                    <div class="navbar__left">
+                        <div class="logo">
+                            <a href="/">Tripo Games</a>
+                        </div>
+                    </div>
+                    <div class="navbar__right flex">    
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link active" href="/">Home</a>
+                        </div>
+                        <div class="navbar__right-item dropdown">
+                            <span>Giochi</span>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu__item">
+                                    <a class="navbar__right-item-link" href="/kipon.html">Kipon</a>
+                                </div>
+                                <div class="dropdown-menu__item">
+                                    <a class="navbar__right-item-link" href="/robotrix.html">Robotrix</a>
+                                </div>
+                                <div class="dropdown-menu__item">
+                                    <a class="navbar__right-item-link" href="#">Treasure box</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link" href="#">Carriere</a>
+                        </div>
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link" href="#">Chi siamo</a>
+                        </div>
+                        <div class="navbar__right-item">
+                            <a class="navbar__right-item-link" href="#contacts">Contatti</a>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 </body>
+<script>
+    const navLinkEls = document.querySelectorAll(".navbar__right-item-link");
+    // console.log(navLinkEls);
+    navLinkEls.forEach( navLinkEl => {
+        // console.log(navLinkEl);
+        navLinkEl.addEventListener("click", () => {
+            document.querySelector(".active").classList.remove("active");
+            navLinkEl.classList.add("active");
+        })
+    })
+</script>
 </html>

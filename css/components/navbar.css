@@ -1,0 +1,50 @@
+nav .navbar a {
+    text-decoration: none;
+}
+
+nav .navbar .navbar__right {
+    background-color: var(--color-logo);
+}
+
+nav .navbar .navbar__right .navbar__right-item .navbar__right-item-link,
+nav .navbar .navbar__right .navbar__right-item span {
+    font-family: var(--font-family-text);
+    color: var(--color-secondary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 66.4px;
+}
+
+nav .navbar .navbar__right .navbar__right-item:first-child .navbar__right-item-link {
+    border-bottom-left-radius: 0.6rem;
+}
+
+nav .navbar .navbar__right .navbar__right-item:last-child .navbar__right-item-link {
+    border-bottom-right-radius: 0.6rem;
+}
+
+nav .navbar .navbar__right .navbar__right-item-link:hover,
+nav .navbar .navbar__right .navbar__right-item-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-nav-active);
+}
+
+nav .navbar .navbar__right .dropdown .dropdown-menu .navbar__right-item-link {
+    height: 2rem;
+}
+
+nav .navbar .navbar__right .dropdown {
+    position: relative;
+}
+
+nav .navbar .navbar__right .dropdown .dropdown-menu {
+    position: absolute;
+    display: none;
+    padding: 0.5rem;
+}
+
+nav .navbar .navbar__right .dropdown:hover .dropdown-menu {
+    display: block;
+}

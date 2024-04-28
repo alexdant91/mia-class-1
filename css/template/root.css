@@ -4,10 +4,14 @@
     --color-primary: #DA392B;
     --color-secondary: #272443;
     --color-tertiary:#FCFF72;
+    --color-logo: #ffffff;
+    --color-nav-active: #ffffff;
 
     /* SIZEs */
     --font-size: 18px;
+    --font-size-logo: 1.7rem;
     --max-width: 1480px;
+    --padding-logo: 1rem 1.5rem;
 
 
     /* FONTS */
