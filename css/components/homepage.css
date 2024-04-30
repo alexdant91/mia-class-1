@@ -35,7 +35,7 @@ header .row > div {
 .card_container {
   display: flex;
   justify-content: space-between;
-  margin-top: -125px;
+  margin-top: -200px;
 }
 .card__section-1 {
   color: #ffffff;
@@ -44,40 +44,39 @@ header .row > div {
   width: 400px;
   height: 443.63335px;
   border-radius: 1rem;
-  background: linear-gradient(
-    180deg,
-    rgba(218, 57, 43, 0),
-    rgba(218, 57, 43, 1)
-  );
   position: relative;
-}
-
-.card__section-1:hover img {
-  opacity: 1;
 }
 
 .card__section-1 img {
   width: 350px;
   height: 443.63335px;
-  opacity: 0.6;
+  background-color: var(--color-primary);
+  opacity: 1;
+  transition: all ease-in-out 0.25s;
 }
 
 #card__header-4 {
+  background: linear-gradient(
+    180deg,
+    rgba(218, 57, 43, 0),
+    rgba(218, 57, 43, 1)
+  );
+  font-family: sans-serif;
   font-size: 30px;
-  color: #000000;
+  color: var(--color-secondary);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(232, 253, 0);
+  background-color: rgb(243, 253, 129);
   text-decoration: none;
   transform: translate(50px, 50px);
-  transition: all 800ms;
 }
 
 #card__header-4:hover {
-  background: rgb(232, 253, 0);
-  font-size: 35px;
+  background: rgb(243, 253, 129);
+  font-size: 35px; 
+  transition: all 1000ms;
 }
 
 /* NON VA L'HOVER DELLA QUARTA CARD
@@ -148,23 +147,64 @@ header .row > div {
   margin: 50px 0;
 }
 
+.img__container {
+  position: relative;
+}
+
+.img__container .img__overlay {
+  border-radius: 1rem;
+  height: calc( 100% - 4px);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  opacity: 0;
+  transition: all ease-in-out 0.25s;
+}
+
+.img__container:hover .img__overlay {
+  opacity: 0.4;
+}
+
 #work_img-1 {
   border-radius: 1rem;
-}
-#work_img-1:hover {
-  /*background: linear-gradient(
-    180deg,
-    rgba(218, 57, 43, 0),
-    rgba(218, 57, 43, 1)
-  );*/
-    filter: brightness(50%) sepia(1) hue-rotate(-10deg) saturate(1000%)
-    contrast(0.8);
-    transition: all 800ms;
+  height: 100%;
+  width: auto;
 }
 
 #section_2-img-2{
   width: 250px;
   height: 280px;
-  margin-top: -200px;
-  margin-left: -125px;
+  position: absolute;
+  bottom: -50px;
+  left: calc(-250px / 2);
+  z-index: 99;
+}
+
+#p_button-1 {
+  font-size: 16px;
+}
+.section_3-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section_3-title {
+  margin-top: 100px;
+  font-family: var(--font-family-title);
+  color: var(--color-secondary);
+  font-size: 50px;
+}
+
+#section_3-text {
+  font-family: var(--font-family-text);
+  color: var(--color-secondary);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px 0;
+  letter-spacing: 0.8px;
+  width: 750px;
+  text-align: center;
 }
