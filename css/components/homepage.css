@@ -52,7 +52,7 @@ header .row > div {
   height: 443.63335px;
   background-color: var(--color-primary);
   opacity: 1;
-  transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 1000ms;
 }
 
 #card__header-4 {
