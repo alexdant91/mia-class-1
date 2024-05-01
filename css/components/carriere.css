@@ -1,3 +1,79 @@
-.posizioni__aperte{
+.posizioni__aperte-bgcolor {
     background-color: var(--color-primary);
 }
+
+.posizioni__aperte-card-image {
+    width: 300px;
+    height: 300px;
+}
+
+.flex {
+    width: 100%;
+    display: flex;
+}
+
+.distances {
+    margin: 30px;
+    padding: 50px;
+}
+
+.acca2 {
+    color: white;
+}
+
+.posizioni__aperte-card-content p,
+span {
+    color: white;
+    font: normal bold 16px/1.4em roboto-thin, roboto, sans-serif
+}
+
+.posizioni__aperte-card-image {
+    border-radius: 20px;
+}
+
+.btn-candidati-1 {
+    background-color: #272443;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 14px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-candidati-1:hover {
+    filter: brightness(130%);
+}
+
+.ph2p {
+    height: 250px;
+    width: 35%;
+
+}
+
+.ph2p-paragraph-one {
+    margin-top: 50px;
+    font: normal normal bold 21px/1.4em roboto-thin, roboto, sans-serif;
+}
+
+.ph2p-title {
+    font: normal normal normal 50px/1.4em 'suez one', serif;
+    margin: 15px 0;
+}
+
+.ph2p-paragraph-two {
+    font: normal normal normal 18px/1.4em roboto-thin, roboto, sans-serif;
+}
+
+.ph2btn {
+    background-image: url(https://static.wixstatic.com/media/c837a6_e2e25be16fcd4052bb23d624c3d54cdd~mv2.jpg/v1/fill/w_1195,h_953,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_e2e25be16fcd4052bb23d624c3d54cdd~mv2.jpg);
+    height: 400px;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(70%);
+}
+
