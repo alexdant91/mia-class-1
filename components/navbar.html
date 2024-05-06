@@ -53,14 +53,24 @@
         </div>
     </nav>
     <script>
-        const navLinkEls = document.querySelectorAll(".navbar__right-item-link");
-        // console.log(navLinkEls);
-        navLinkEls.forEach( navLinkEl => {
-            // console.log(navLinkEl);
-            navLinkEl.addEventListener("click", () => {
+        // const navLinkEls = document.querySelectorAll(".navbar__right-item-link");
+        // // console.log(navLinkEls);
+        // navLinkEls.forEach( navLinkEl => {
+        //     // console.log(navLinkEl);
+        //     navLinkEl.addEventListener("click", () => {
+        //         document.querySelector(".active").classList.remove("active");
+        //         navLinkEl.classList.add("active");
+        //     })
+        // })
+
+        const nav = document.querySelector("nav");
+
+        nav.addEventListener("click", (event) => {
+            const { target } = event;
+            if(target.classList.contains("navbar__right-item-link")) {
                 document.querySelector(".active").classList.remove("active");
-                navLinkEl.classList.add("active");
-            })
+                target.classList.add("active");
+            }
         })
     </script>
 </body>
