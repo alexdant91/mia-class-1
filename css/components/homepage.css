@@ -75,7 +75,7 @@ header .row > div {
 
 #card__header-4:hover {
   background: rgb(243, 253, 129);
-  font-size: 35px; 
+  font-size: 35px;
   transition: all 1000ms;
 }
 
@@ -153,7 +153,7 @@ header .row > div {
 
 .img__container .img__overlay {
   border-radius: 1rem;
-  height: calc( 100% - 4px);
+  height: calc(100% - 4px);
   width: 100%;
   position: absolute;
   top: 0;
@@ -173,7 +173,7 @@ header .row > div {
   width: auto;
 }
 
-#section_2-img-2{
+#section_2-img-2 {
   width: 250px;
   height: 280px;
   position: absolute;
@@ -207,4 +207,294 @@ header .row > div {
   letter-spacing: 0.8px;
   width: 750px;
   text-align: center;
+}
+
+.gamecard_container {
+  background-image: url("https://static.wixstatic.com/media/c837a6_1cf50738638a41d680ed4dc3db5e5492~mv2.png/v1/fill/w_1857,h_1179,al_c,q_95,usm_0.66_1.00_0.01,enc_auto/c837a6_1cf50738638a41d680ed4dc3db5e5492~mv2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 120vh;
+  margin-top: 250px;
+  position: relative;
+}
+
+.gamecard_container .gamecard:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.gamecard_container .gamecard:nth-child(3) {
+  margin-top: 350px;
+}
+.gamecard_container :nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.gamecard {
+  height: 390px;
+  width: 383px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 7.07px 7.07px 5px rgba(237, 75, 64, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.6);
+  padding: 50px;
+}
+
+.div_gamecard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gamecard_img {
+  border-radius: 25px;
+  border: solid 7px #ffffff;
+  box-shadow: 7.07px 7.07px 5px rgba(237, 75, 64, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+#ghost {
+  margin-left: -410px;
+  margin-bottom: 50px;
+  width: 250px;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap {
+  gap: 20px;
+}
+
+.h_gamecard {
+  font-family: var(--font-family-text);
+  color: var(--color-secondary);
+  font-size: 20px;
+}
+
+.p_gamecard {
+  font-family: var(--font-family-text);
+  color: var(--color-secondary);
+}
+div .p_gamecard:first-child {
+  margin: 25px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex a:first-child img {
+  width: 123px;
+  height: 40px;
+}
+
+.flex a:last-child img {
+  width: 140px;
+  height: 40px;
+}
+
+#section_4 {
+  margin-top: 200px;
+  height: 1280px;
+}
+
+#div_background-1 {
+  background-image: url("https://static.wixstatic.com/media/c837a6_cbd9440d3fce436c913d12b16be55401~mv2.jpg/v1/fill/w_1857,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_cbd9440d3fce436c913d12b16be55401~mv2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 50%;
+  background-attachment: fixed;
+}
+
+#div_background-2 {
+  background-image: url("https://static.wixstatic.com/media/c837a6_0d97f82987d44ed49ee37d4150d890a5~mv2.jpg/v1/fill/w_1857,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_0d97f82987d44ed49ee37d4150d890a5~mv2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  background-attachment: fixed;
+}
+
+.button__style-2 {
+  width: 130px;
+  height: 60px;
+  border-radius: 0.6rem;
+  border-color: transparent;
+  background-color: var(--color-tertiary);
+  cursor: pointer;
+  margin-left: 80px;
+  margin-top: 25px;
+}
+
+.button__style-2:hover {
+  background-color: aliceblue;
+  transition: all 600ms;
+}
+
+.button__style-2 p {
+  font-family: var(--font-family-text);
+  color: var(--color-secondary);
+  font-size: 16px;
+}
+
+#h_title-career {
+  font-family: var(--font-family-title);
+  font-size: 50px;
+  color: white;
+  line-height: 1.2em;
+  padding-top: 25px;
+  padding-left: 80px;
+  padding-right: 250px;
+}
+#p_title-career {
+  font-family: var(--font-family-text);
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  padding-left: 80px;
+  padding-top: 100px;
+}
+
+#margin_img {
+  margin-right: 250px;
+  margin-bottom: -625px;
+  width: 500px;
+}
+
+.form_style {
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+.gap_2 {
+  gap: 500px;
+}
+
+#first_form {
+  /*width: 438px;
+  height: 666px;*/
+  margin-left: 80px;
+  margin-top: -250px;
+  padding: 35px;
+}
+
+#first_form div {
+  padding-bottom: 10px;
+}
+
+#first_form div h4 {
+  font-family: var(--font-family-text);
+  font-size: 34px;
+  color: var(--color-secondary);
+}
+
+#first_form p {
+  font-family: var(--font-family-text);
+  font-size: 18px;
+  color: var(--color-secondary);
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+div #p_margin-form {
+  font-size: 16px;
+}
+
+div label {
+  font-family: var(--font-family-text);
+  font-size: 16px;
+  color: var(--color-secondary);
+}
+
+div input {
+  border-radius: 10px;
+  border: 1px solid #000000;
+  height: 59px;
+  width: 100%;
+  margin-top: 15px;
+}
+div input:hover {
+  border: 2px solid #000000;
+}
+
+.input_1 {
+  width: 165px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px #000000 solid;
+}
+
+textarea:hover {
+  border: 2px solid #000000;
+}
+
+#send {
+  font-family: var(--font-family-text);
+  font-size: 16px;
+  color: #ffffff;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  border: none;
+}
+
+#send:hover {
+  background-color: var(--color-primary);
+}
+
+#second_form {
+  width: 388px;
+  height: 210px;
+  background-color: var(--color-primary);
+  padding: 25px 20px;
+}
+
+#subscribe {
+  font-family: var(--font-family-text);
+  font-size: 21px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#sub_email {
+  align-items: end;
+}
+.label_email {
+  color: #ffffff;
+}
+
+#email-2 {
+  width: 238px;
+  height: 59px;
+}
+
+#email-2:hover {
+  background-color: #e6918a;
+}
+
+#iscriviti {
+  width: 79px;
+  height: 60px;
+  font-family: var(--font-family-text);
+  font-size: 16px;
+  color: var(--color-secondary);
+  border: none;
+  background-color: rgb(243, 253, 129);
+  cursor: pointer;
+}
+
+#iscriviti:hover {
+  background-color: aliceblue;
+  transition: all 600ms;
 }
