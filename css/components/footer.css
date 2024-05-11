@@ -1,6 +1,7 @@
 footer {
     font-family: var(--font-family-text);
     background-color: var(--color-bg);
+    /* overflow: hidden; */
 }
 
 footer .footer__top,
@@ -57,4 +58,53 @@ footer .footer__bottom {
 footer .footer__bottom,
 footer .footer__bottom p a {
     color: var(--color-footer);
+}
+
+@media screen and (max-width: 756px) {
+    footer .footer__top,
+    footer .footer__center,
+    footer .footer__bottom {
+        max-width: 80%;
+    }
+
+    footer .footer__top .footer__top-paragraph {
+        font-size: 3rem;
+    }
+
+    footer .footer__center {
+        display: block;
+        padding-bottom: 2rem;
+    }
+
+    footer .footer__center .footer__center-item {
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+
+    footer .footer__center .footer__center-item .footer__center-item-title {
+        font-size: 3rem;
+    }
+
+    footer .footer__center .footer__center-item .footer__center-item-content-link a, 
+    footer .footer__center .footer__center-item .footer__center-item-content-info span {
+        font-size: 1.7rem;
+    }
+
+    footer .footer__center .footer__center-item .footer__center-item-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .footer__center .footer__center-item .footer__center-item-content a img {
+        width: 50%;
+        border-radius: 1rem;
+    }
+
+    footer .footer__center .footer__center-item .footer__center-item-content a:first-child img {
+        margin: 1rem 0 3rem;
+    }
+
+    footer .footer__bottom {
+        font-size: 1.5rem;
+    }
 }
