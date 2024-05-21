@@ -48,6 +48,11 @@
                             <a class="navbar__right-item-link" href="#contacts">Contatti</a>
                         </div>                      
                     </div>
+                    <div class="navbar__hamburger">
+                        <span class="navbar__hamburger-bar"></span>
+                        <span class="navbar__hamburger-bar"></span>
+                        <span class="navbar__hamburger-bar"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,13 +69,22 @@
         // })
 
         const nav = document.querySelector("nav");
+        const hamburger = document.querySelector(".navbar__hamburger");
+        const navMenu = document.querySelector(".navbar__right");
 
         nav.addEventListener("click", (event) => {
+            console.log(event.target)
             const { target } = event;
+            // console.log(target);
             if(target.classList.contains("navbar__right-item-link")) {
                 document.querySelector(".active").classList.remove("active");
                 target.classList.add("active");
             }
+        })
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
         })
     </script>
 </body>
