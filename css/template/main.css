@@ -15,3 +15,7 @@
     width: 100%;
     max-width: var(--max-width);
 }
+
+.section {
+    padding: var(--section-py);
+}

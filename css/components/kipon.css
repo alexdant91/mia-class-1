@@ -1,0 +1,235 @@
+#kipon {
+    background-color: #f6f4f0;
+}
+
+.container {
+    position: relative;
+}
+
+
+.background__img {
+    position: relative
+}
+
+.background__img {
+    background-image: url(https://images-ext-1.discordapp.net/external/FOkqUxVmbEMEi8-3IqxpSvexGEyOl5LHHiW8K_rUO_g/https/static.wixstatic.com/media/c837a6_8731dc6786664fda8dca78196a46ad5e~mv2.jpg/v1/fill/w_1459%2Ch_687%2Cal_l%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto/c837a6_8731dc6786664fda8dca78196a46ad5e~mv2.jpg?format=webp&width=2206&height=1038);
+    height: 300vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+.color {
+    height: 17rem;
+    width: 100%;
+    background-color: #f6f4f0;
+    justify-content: top;
+    z-index: 1;
+}
+
+.card {
+    transform: translateY(-40%);
+}
+
+.card {
+    background-color: white;
+    height: 600px;
+    width: 650px;
+    display: inline-block;
+    text-align: left;
+    border: 2px solid rgb(214, 206, 206);
+    border-radius: 5%;
+    z-index: 2;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    padding: 30px;
+    border-bottom: 0;
+
+}
+
+.card img {
+    border-radius: 30%;
+    height: 80px;
+    width: 80px;
+
+}
+
+.card__img {
+    text-align: left;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.card__img .card__img-text h4 {
+    font-size: 1.3rem;
+}
+
+
+.card,
+p,
+h4 {
+    font-family: var(--font-family-text);
+}
+
+.p__one {
+    font-family: var(--font-family-title);
+    font-size: 50px;
+}
+
+.p__two {
+    font-size: 1.125rem;
+    line-height: 1.82rem;
+    margin-top: 1rem;
+}
+
+.img {
+    /*background-color:#ffffff;*/
+    width: 100%;
+
+
+}
+
+.img__title,
+.reviews__title {
+    margin-bottom: 50px;
+    font-family: var(--font-family-text);
+    font-weight: 200;
+    font-size: 34px;
+}
+
+.img__content {
+    text-align: center;
+}
+
+.img__one,
+.img__two {
+    border-radius: 20px;
+    height: 320px;
+    width: 600px;
+    padding: 0;
+    margin-left: 30px;
+}
+
+#screenshot {
+    background-color: #f6f4f0;
+}
+
+.review {
+    background-color: #f6f4f0;
+    margin-top: 50px;
+}
+
+.review  {
+   justify-items: left;
+
+}
+.reviews__img img {
+    height: 100px;
+    width: 300px;
+    border-radius: 20px; 
+}
+
+.reviews__title
+{
+margin-top: 20px;
+
+}
+
+.reviews__content-one,
+.reviews__content-two,
+.reviews__content-three {
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+    float: left;
+    margin-top: 50px;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+}
+
+.reviews__content {
+    justify-items: center;
+    align-items: center;
+
+}
+
+.p {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    color:rgb(255, 255, 255);
+    font-weight: bold
+
+}
+
+.reviews__content p {
+    text-align: center;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+.reviews__content-three p span {
+    font-weight: bold;
+}
+
+.reviews__content-two p span {
+    font-weight: bold;
+}
+
+.reviews__content-one p span {
+    font-weight: bold;
+}
+
+.p__1 {
+    font-family: var(--font-family-title);
+    font-size: 50px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+.background__img-2 {
+    background-image: url(https://static.wixstatic.com/media/c837a6_cff34240addf4fa4991328bd1d51dde0~mv2.jpg/v1/fill/w_1470,h_735,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_cff34240addf4fa4991328bd1d51dde0~mv2.jpg );
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    
+}
+
+#bottom-cta {
+    background-color: #f6f4f0;
+}
+
+.play {
+    text-align: center;
+    background-color:white;
+    border-radius: 30px;
+    height: 200px;
+   
+   
+}
+
+.play h2 {
+    font-family: var(--font-family-text);
+    font-size: 50px;
+}
+
+.bottom-one, .bottom-two {
+    display: inline-block;
+}
+
+.logo {
+    text-align: center;
+    font-size: 24px;
+}
