@@ -2,7 +2,8 @@ const colors = ["red", "blue", "orange", "green"]; // Object dove: key -> value 
 const user = { 
     name: "Ale", 
     age: 32, 
-    email: "ale@gmail.com", 
+    email: "ale@gmail.com",
+    isAdmin: false,
     level: { 
         value: 1, 
         role: "USER", 
@@ -13,11 +14,15 @@ const user = {
     } 
 }; // Object dove: key -> value = key(string) -> value
 
+const admin = {
+    isAdmin: true
+}
+
 //* Copy
 // const colors2 = colors; // -> 0x00000003534365 = colors -> REFERENCE
 // // colors2 = 0x00000003534365
 
-// const colors3 = [...colors]; // Copy of array
+// const colors3 = ["gray", ...colors]; // Copy of array -> ["gray", "red", "blue", "orange", "green"]
 
 // colors[0] = "yellow";
 // colors2[1] = "gray";
@@ -28,7 +33,11 @@ const user = {
 
 // const user2 = user;
 
-// // const user3 = { ...user };
+// const user3 = { ...user, ...admin }; // -> isAdmin: false -> true
+// const DEFAULT_OPTIONS = { render: true, getFromHeaders: false, authToken: false, }
+// const options = { render: false, authToken: true };
+
+// const finalOptions = { ...DEFAULT_OPTIONS, ...options } // -> render: false, getFromHeaders: false, authToken: true ...
 // const user3 = JSON.parse(JSON.stringify(user));
 
 // user2.name = "Giovanni";
