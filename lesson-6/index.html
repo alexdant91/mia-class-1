@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <thead id="data-header"></thead>
+        <tbody id="data-table-body"></tbody>
+    </table>
+
+    <script type="module" src="./data.mjs"></script>
+    <script type="module">
+        import { initTable } from "./data.mjs";
+
+        initTable("https://jsonplaceholder.typicode.com/users", {
+            theadSelector: "#data-header",
+            tbodySelector: "#data-table-body"
+        });
+    </script>
+</body>
+</html>
