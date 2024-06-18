@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 30px;
+}
+
+.accordion {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion .accordion__item {
+    background-color: #f4f4f5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.accordion .accordion__item .accordion__item-title {
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion .accordion__item .accordion__item-title span {
+    color: #27272a;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.accordion .accordion__item .accordion__item-body {
+    color: #71717a;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.25s;
+}
+
+
+.accordion .accordion__item.open .accordion__item-body {
+    max-height: 150px;
+    opacity: 1;
+}
+
+.accordion .accordion__item .accordion__item-body p {
+    padding: 0 15px 15px 15px;
+    line-height: 15px;
+}
+
+.accordion .accordion__item .accordion__item-title .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11px;
+    width: 11px;
+}
+
+.accordion .accordion__item .accordion__item-title .icon::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #bdbcbc;
+}
+
+.accordion .accordion__item .accordion__item-title .icon::before {
+    content: " ";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #bdbcbc;
+    transition: all ease-in-out 0.25s;
+}
+
+.accordion .accordion__item.open .accordion__item-title .icon::before {
+    transform: rotate(-90deg);
+    opacity: 0;
+}
