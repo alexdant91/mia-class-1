@@ -32,8 +32,11 @@
 
 
 const counterFunction = (num) => {
+  // Se num !== "number" oppure num > 9999 allora dai un errore
   if (typeof num === "number" && num > 9999) {
     throw new Error(`this number is not valid, il numero dev'essere intero e inferiore a 9999`);
-  }return num.toString().length;
+  }
+  
+  return num.toString().length;
 }
 console.log(counterFunction(125));
