@@ -10,6 +10,12 @@
     Output: 3 cifre
 */
 
+const counterFunction = (num) => {
+  if (typeof num !== "number" && num > 9999) {
+    throw new Error(`this number is not valid, il numero dev'essere intero e inferiore a 9999`);
+  }return num.toString().length;
+}
+console.log(counterFunction(12533));
 /*
   1. Chi l'azzecca?
   Scrivi un programma che dati due numeri di due ipotetici giocatori,
@@ -31,9 +37,3 @@
 */
 
 
-const counterFunction = (num) => {
-  if (typeof num !== "number" && num > 9999) {
-    throw new Error(`this number is not valid, il numero dev'essere intero e inferiore a 9999`);
-  }return num.toString().length;
-}
-console.log(counterFunction(12533));
