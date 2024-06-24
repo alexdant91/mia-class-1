@@ -10,6 +10,14 @@
     Output: 3 cifre
 */
 
+const numLen = (num) => {
+  if (typeof num !== "number" && num > 9999 && num != Number.isInteger(num)) {
+    throw new Error("Ci deve essere un numero intero minore di 9999")
+  } else {
+    let numString = num.toString();
+    return numString.length;
+  }
+}
 /*
   1. Chi l'azzecca?
   Scrivi un programma che dati due numeri di due ipotetici giocatori,
