@@ -29,3 +29,11 @@
     (Math.random() * (100-1) + 1)
   Ricordati che il valore dovrà essere intero quindi dovrai arrontondarlo usando Math.floor()
 */
+
+
+const counterFunction = (num) => {
+  if (!num || typeof num !== "number" ) {
+    throw new Error(`${typeof num} is not valid`);
+  }return num.toString().length;
+}
+console.log(counterFunction(125));
