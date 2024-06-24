@@ -10,6 +10,13 @@
     Output: 3 cifre
 */
 
+const contaNumero = (numero) => {
+  let risultato = numero.toString(numero);
+  if(numero === Number && numero <= 999)
+  return risultato.lenght;
+}
+
+
 /*
   1. Chi l'azzecca?
   Scrivi un programma che dati due numeri di due ipotetici giocatori,
