@@ -18,6 +18,7 @@ const numLen = (num) => {
     return numString.length;
   }
 }
+
 /*
   2. Chi l'azzecca?
   Scrivi un programma che dati due numeri di due ipotetici giocatori,
@@ -157,8 +158,6 @@ const numLen = (num) => {
   Variante:
   Migliora i metodi di Modifica e Cancellazione, al posto di prendere in input l'indice dell'array passa in input il nome
   e ricava l'indice sul quale applicare l'operazione.
-
-  http://www.imparareaprogrammare.it
 */
 
 /*
