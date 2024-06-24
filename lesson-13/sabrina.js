@@ -11,8 +11,8 @@
 */
 
 const contaNumero = (numero) => {
-  let risultato = numero.toString(numero);
-  if(numero === Number && numero <= 999)
+  let risultato = numero.toString();
+  if(typeof numero === "number" && numero <= 9999)
   return risultato.lenght;
 }
 
