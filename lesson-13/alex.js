@@ -18,6 +18,7 @@ const numLen = (num) => {
     return numString.length;
   }
 }
+
 /*
   1. Chi l'azzecca?
   Scrivi un programma che dati due numeri di due ipotetici giocatori,
