@@ -12,8 +12,8 @@
 
 const contaNumero = (numero) => {
   let risultato = numero.toString();
-  if(typeof numero === "number" && numero <= 9999)
-  return risultato.lenght;
+  if (typeof numero === "number" && numero <= 9999)
+    return risultato.lenght;
 }
 
 /*
@@ -35,36 +35,34 @@ const contaNumero = (numero) => {
     (Math.random() * (100-1) + 1)
   Ricordati che il valore dovrà essere intero quindi dovrai arrontondarlo usando Math.floor()
 */
-  function generaNumero(){
-    return Math.floor(Math.random() * (100-1) + 1);
+function generaNumero() {
+  return Math.floor(Math.random() * (100 - 1) + 1);
+}
+
+function chiHaVinto(casuale, giocatore1, giocatore2) {
+  let vicino1 = Math.abs(casuale - giocatore1);
+  let vicino2 = Math.abs(casuale - giocatore2);
+
+  if (vicino1 < vicino2) {
+    return "il giocatore 1 è più vicino"
+  } else if (vicino1 > vicino2) {
+    return "il giocatore 2 è più vicino"
+  } else {
+    return "i giocatori si sono avvicinati allo stesso modo"
   }
 
-  function chiHaVinto(casuale, giocatore1, giocatore2){
-    let vicino1 = Math.abs(casuale - giocatore1);
-    let vicino2 = Math.abs(casuale - giocatore2);
+}
 
-    if(vicino1 < vicino2){
-      return "il giocatore 1 è più vicino"
-    }else if( vicino1 > vicino2){
-      return "il giocatore 2 è più vicino"
-    }else {
-      return "i giocatori si sono avvicinati allo stesso modo"
-    }
+let giocatore1 = 3;
+let giocatore2 = 10;
 
+const chiAzzecca = (giocatore1, giocatore2) => {
+  if (giocatore1 === casuale) {
+    console.log("il giocatore1 c'ha azzeccato");
+  } else if (giocatore2 === casuale) {
+    console.log("il giocatore2 c'ha azzeccato");
   }
-
- let giocatore1 = 3;
- let giocatore2 = 10;
-
- const chiAzzecca = (giocatore1, giocatore2) => {
-    if(giocatore1 === casuale){
-      console.log("il giocatore1 c'ha azzeccato");
-    }else if(giocatore2 === casuale){
-      console.log("il giocatore2 c'ha azzeccato");
-    }else {
-
-    }
- }
+}
 /*
   3. Fai il sensitivo
   Scrivi una funzione che calcoli la vicinanza tra tre numeri: A, B e N, e restituisca:
