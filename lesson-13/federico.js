@@ -11,11 +11,11 @@
 */
 
 const counterFunction = (num) => {
-  if (typeof num !== "number" && num > 9999) {
+  if (typeof num === "number" && num > 9999) {
     throw new Error(`this number is not valid, il numero dev'essere intero e inferiore a 9999`);
   }return num.toString().length;
 }
-console.log(counterFunction(12533));
+console.log(counterFunction(1253));
 /*
   2. Chi l'azzecca?
   Scrivi un programma che dati due numeri di due ipotetici giocatori,
@@ -32,10 +32,38 @@ console.log(counterFunction(12533));
   Per generare un numero casuale utlizza la funzione javascript Math.random() che restituisce un intervallo compreso tra 0 e 1.
   Il valore ottenuto dovrà essere convertito per ottenere un valore valido per il tuo intervallo, in questo modo:
     (Math.random() * (max-min) + min) ovvero, nel tuo caso:
-    (Math.random() * (100-1) + 1)
+    
   Ricordati che il valore dovrà essere intero quindi dovrai arrontondarlo usando Math.floor()
 */
+const calcoloNumero = (num1, num2) => {
+  let numeroCasuale = Math.floor(Math.random() * (100-1) + 1);           // +1 da aggiungere per arrivare a includere 100
 
+  console.log(`il numero casuale è: ${numeroCasuale}`);
+
+  if(num1 === numeroCasuale) {
+    console.log("Il giocatore 1 ha azzeccato il numero casuale!");
+  
+  }else if(num2 === numeroCasuale) {
+    console.log("Il giocatore 2 ha azzeccato il numero casuale!");
+  
+  }else {
+
+    diff1 = Math.abs(num1 - numeroCasuale);                        //Math.abs per ottenere il valore assoluto di un numero, senza considerare il segno.
+    diff2 = Math.abs(num2 - numeroCasuale);
+    
+    if(diff1 < diff2) {
+      console.log("Nessuno dei due ha azzeccato il numero casuale, ma il giocatore 1 si è avvicinato di più!")
+    
+    }else if(diff1 > diff2) {
+      console.log("Nessuno dei due ha azzeccato il numero casuale, ma il giocatore 2 si è avvicinato di più!")
+    
+    }else {
+      console.log("Nessuno dei due ha azzeccato il numero casuale ed entrambi i giocatori si sono avvicinati allo stesso modo")
+    }
+  }
+}
+
+console.log(calcoloNumero(12, 24));
 /*
   3. Fai il sensitivo
   Scrivi una funzione che calcoli la vicinanza tra tre numeri: A, B e N, e restituisca:
@@ -51,7 +79,43 @@ console.log(counterFunction(12533));
   Se non ricordi come generare un numero random e come convertirlo nel tuo intervallo riguarda l'esercizio sulle condizioni "Chi l'azzecca?".
   Se non ricordi come richiedere all'utente un valore in input, rivedi l'esercizio sugli array "Azzecca e azzera"
 */
+const calcolaVicinanza = (a, b, n) => {
+  const distanzaA = Math.abs(a - n);
+  const distanzaB = Math.abs(b - n);
 
+  if (distanzaA === distanzaB) {
+    return 0;
+  }else if(distanzaA > distanzaB) {
+    return 1;
+  }else {
+    return -1;
+  }
+}
+//Variante
+/* 
+let numRandom = Math.floor(Math.random() * 100) + 1;
+console.log(`Numero casuale generato: ${numRandom}`);
+
+const giocatore1 = Number(prompt("Giocatore1 inserisci un numero: "));
+const giocatore2 = Number(prompt("Giocatore2 inserisci un numero: "));
+
+if(giocatore1 === numRandom) {
+  console.log("il Giocatore1 ha indovinato il numero!!")
+}else if(giocatore2 === numRandom) {
+  console.log("il Giocatore1 ha indovinato il numero!!")
+}else {
+     const risultato = calcolaVicinanza(a, b, n);
+    if (giocatore1 === numRandom) {
+        console.log("Il giocatore 1 si è avvicinato di più al numero!"); 
+    } else if (risultato === 1 || giocatore2 === numRandom) {
+        console.log("Il giocatore 2 si è avvicinato di più al numero!");
+    } else {
+        console.log("Entrambi i giocatori sono equidistanti dal numero!");
+    }
+};
+*/
+   
+    
 /*
   4. Indovina il giorno
   Scrivi un programma con due funzioni, la prima prende in ingresso un intero e verifica se sia compreso nel range da 1 a 7.

@@ -16,7 +16,7 @@ const numLen = (num) => {
   } else {
     let numString = num.toString();
     return numString.length;
-  }
+  } 
 }
 
 /*
