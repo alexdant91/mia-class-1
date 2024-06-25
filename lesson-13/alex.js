@@ -31,6 +31,57 @@ const numLen = (num) => {
     Output: Numero casuale generato = 7
             "Nessuno dei due ha azzeccato il numero casuale, ma il giocatore 1 si è avvicinato di più!"
 
+*/
+
+let random = (Math.random() * (100-1) + 1) ; 
+random = Math.floor(random);
+
+function giocatori(a , b ) {
+  if(a == random && b == random) { //controlliamo le varie possibilità inziali
+    return "Quasi impossibile";
+  }
+    else if(a == random) {
+    return "Giocatore uno ha azzecato";
+  } else if(b == random) {
+    return "Giocatore due ha azzecato";
+  } else {
+    if(a > random && b > random ) { //calcolo quando random è maggiore di entrambi i numeri
+      let l1 = a - random ;
+      let l2 = b - random ;
+      if (l1 > l2) {
+        return a ; 
+      } else {
+        return b;
+      } 
+    } else if(a > random && b < random) { //calcolo quando random è in mezzo a maggiore, b minore
+      let l1 = a - random;
+      let l2 = random - b;
+      if(l1 > l2){
+        return a;
+      } else {
+        return b;
+      }
+    } else if(a < random && b > random) { //calcolo quando random è in mezzo a minore, b maggiore
+      let l1 = random - a;
+      let l2 = b - random;
+      if (l1 > l2) {
+        return a;
+      } else {
+        return b;
+      }
+    } else if(a < random && b < random) { //calcolo quando enrtambi i numeri sono minori di random
+      let l1 = random - a;
+      let l2 = random - b;
+      if(l1 > l2) {
+        return a;
+      } else {
+        return b;
+      }
+    }
+  }
+}
+
+/*
   Consigli:
   Per generare un numero casuale utlizza la funzione javascript Math.random() che restituisce un intervallo compreso tra 0 e 1.
   Il valore ottenuto dovrà essere convertito per ottenere un valore valido per il tuo intervallo, in questo modo:
@@ -45,7 +96,10 @@ const numLen = (num) => {
     - 0 Se A e B sono equidistanti da N
     - 1 Se B è più vicino a N rispetto ad A
     - -1 Se A è più vicino a N rispetto a B
+*/
 
+
+/*
   Variante:
   Utilizza questa funzione per creare un programma che simuli un gioco tra due utenti:
   vince chi indovina per primo il numero N che verrà generato casualmente tra 1 e 100.
@@ -68,6 +122,45 @@ const numLen = (num) => {
         7 = Domenica
   - nel caso il giorno non sia compreso nel range, la funzione dovrà restituire un messaggio d'errore simile a questo: 'Peccato, non posso indovinare il giorno.'
 */
+function verifica(a) {
+  let n = 0;
+  do {
+    n++
+    if(a == n) {
+      return true;
+    } else {
+      return false;
+    }
+  } while (n < 7)
+}
+
+if(verifica(a) == true) {
+  switch(a) {
+    case 1 : console.log("Lunedi");
+  }
+  switch(a) {
+    case 2 : console.log("Martedi");
+  }
+  switch(a) {
+    case 3 : console.log("Mercoledi");
+  }
+  switch(a) {
+    case 4 : console.log("Giovedi");
+  }
+  switch(a) {
+    case 5 : console.log("Venerdi");
+  }
+  switch(a) {
+    case 6 : console.log("Sabato");
+  }
+  switch(a) {
+    case 7 : console.log("Domenica");
+  }
+} else {
+  console.log("Peccato, non posso indovinare il giorno.");
+}
+
+
 
 /*
   5. La calcolatrice
