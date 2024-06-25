@@ -36,7 +36,7 @@ console.log(counterFunction(1253));
   Ricordati che il valore dovrà essere intero quindi dovrai arrontondarlo usando Math.floor()
 */
 const calcoloNumero = (num1, num2) => {
-  let numeroCasuale = Math.floor(Math.random() * (100-1) + 1);           // +1 da aggiungere per arrivare a includere 100
+  let numeroCasuale = Math.floor(Math.random() * (100-1) )+ 1;           // +1 da aggiungere per arrivare a includere 100
 
   console.log(`il numero casuale è: ${numeroCasuale}`);
 
@@ -105,9 +105,9 @@ if(giocatore1 === numRandom) {
   console.log("il Giocatore1 ha indovinato il numero!!")
 }else {
      const risultato = calcolaVicinanza(a, b, n);
-    if (giocatore1 === numRandom) {
+    if (risultato === -1) {
         console.log("Il giocatore 1 si è avvicinato di più al numero!"); 
-    } else if (risultato === 1 || giocatore2 === numRandom) {
+    } else if (risultato === 1) {
         console.log("Il giocatore 2 si è avvicinato di più al numero!");
     } else {
         console.log("Entrambi i giocatori sono equidistanti dal numero!");
