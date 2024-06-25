@@ -11,15 +11,11 @@
 */
 
 const counterFunction = (num) => {
-  // Se num !== "number" oppure num > 9999 allora dai un errore
-  if (typeof num === "number" && num > 9999) {
+  if (typeof num !== "number" && num > 9999) {
     throw new Error(`this number is not valid, il numero dev'essere intero e inferiore a 9999`);
-  }
-  
-  return num.toString().length;
+  }return num.toString().length;
 }
-console.log(counterFunction(125));
-
+console.log(counterFunction(12533));
 /*
   2. Chi l'azzecca?
   Scrivi un programma che dati due numeri di due ipotetici giocatori,
@@ -173,3 +169,5 @@ console.log(counterFunction(125));
   Variante:
   Stampa anche quanti sono i valori monori della media e quanti quelli maggiori.
 */
+
+
