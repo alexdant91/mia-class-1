@@ -177,7 +177,16 @@ if(giocatore1 === numRandom) {
   Consiglio:
   Per andare a capo usa '\n'.
 */
-
+const calculator = () => {
+  for(i = 0; i <= 100; i++){
+  console.log(i + " ");
+  if(i % 10 === 0) {
+    console.log("\n");
+  }
+ }
+};
+console.log(calculator());
+ 
 /*
   7. Vinci tu!
   Scrivi un programma che dato il numero dei tiri da effettuare per ciascun giocatore (N),
