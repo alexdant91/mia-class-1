@@ -26,4 +26,4 @@ const reverseIfOdd = (str) => {
     }
 }
 
-console.log(reverseIfOdd("Sabrina"))
+console.log(reverseIfOdd("Sabrina"));
