@@ -98,6 +98,32 @@ function giocatori(a , b ) {
     - -1 Se A è più vicino a N rispetto a B
 */
 
+function numeri(a, b, n) {
+  if(a > n && b > n) {
+    let d1 = a - n;
+    let d2 = b - n;
+    if(d1 == d2) {
+      console.log("0");
+    }
+  } else if(a > n && b < n) {
+    let d1 = a - n;
+    let d2 = n - b;
+    if(d1 > d2) {
+      console.log("-1");
+    } else {
+      console.log("1")
+    }
+  } else if(a < n && b < n) {
+    let d1 = n - a;
+    let d2 = n - b;
+    if(d1 > d2) {
+      console.log("-1");
+    } else {
+      console.log("1");
+    }
+  }
+}
+
 
 /*
   Variante:
@@ -137,24 +163,25 @@ function verifica(a) {
 if(verifica(a) == true) {
   switch(a) {
     case 1 : console.log("Lunedi");
-  }
-  switch(a) {
+    break;
+
     case 2 : console.log("Martedi");
-  }
-  switch(a) {
+    break;
+
     case 3 : console.log("Mercoledi");
-  }
-  switch(a) {
+    break;
+
     case 4 : console.log("Giovedi");
-  }
-  switch(a) {
+    break;
+
     case 5 : console.log("Venerdi");
-  }
-  switch(a) {
+    break;
+
     case 6 : console.log("Sabato");
-  }
-  switch(a) {
+    break;
+
     case 7 : console.log("Domenica");
+    break;
   }
 } else {
   console.log("Peccato, non posso indovinare il giorno.");
@@ -190,6 +217,41 @@ if(verifica(a) == true) {
   Utilizza il costrutto Switch-Case, gestire anche il caso di operazione non valida (non presente tra le operazioni consentite).
 */
 
+function calcolatrice(operation , a, b) {
+  switch(operation) {
+    case "somma" : let somma = a + b;
+    console.log(somma);
+    break;
+
+    case "sottrazione" : let sott = a - b;
+    console.log(sott);
+    break;
+
+    case "moltiplicazione" : let molt = a * b;
+    console.log(molt);
+    break;
+
+    case "divisione" : let div = a / b;
+    console.log(div);
+    break;
+
+    case "modulo" : let mod = a % b;
+    console.log(mod)
+    break;
+
+    case "potenza" : let pot = (a * a) * b;
+    console.log(pot);
+    break;
+
+    case "media" : let media = (a + b) / 2;
+    console.log(media);
+    break;
+
+    default : console.log("operazione non valida (non presente tra le operazioni consentite)");
+  }
+}
+
+
 /*
   6. Rincorri la decina
   Scrivi un programma che che stampi i numeri da 1 a 100 andando a capo ogni 10.
@@ -209,6 +271,13 @@ if(verifica(a) == true) {
   Consiglio:
   Per andare a capo usa '\n'.
 */
+
+let i = 0;
+let n = 0;
+
+for(i = 0, i < 100, i++) {
+  
+}
 
 /*
   7. Vinci tu!
