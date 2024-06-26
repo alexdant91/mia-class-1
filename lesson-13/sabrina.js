@@ -35,7 +35,7 @@ const contaNumero = (numero) => {
     (Math.random() * (100-1) + 1)
   Ricordati che il valore dovrà essere intero quindi dovrai arrontondarlo usando Math.floor()
 */
-function generaNumero() {
+/*function generaNumero() {
   return Math.floor(Math.random() * (100 - 1) + 1);
 }
 
@@ -62,7 +62,7 @@ const chiAzzecca = (giocatore1, giocatore2) => {
   } else if (giocatore2 === casuale) {
     console.log("il giocatore2 c'ha azzeccato");
   }
-}
+} */
 /*
   3. Fai il sensitivo
   Scrivi una funzione che calcoli la vicinanza tra tre numeri: A, B e N, e restituisca:
@@ -93,6 +93,24 @@ const chiAzzecca = (giocatore1, giocatore2) => {
   - nel caso il giorno non sia compreso nel range, la funzione dovrà restituire un messaggio d'errore simile a questo: 'Peccato, non posso indovinare il giorno.'
 */
 
+
+const numeroIntero = (numero) => {
+  if (!Number.isInteger(numero)) {
+    throw new Error("il numero dev'essere intero")
+  } else if (numero >= 1 && numero <= 7) {
+    return numero
+  } else {
+    throw new Error("il numero dev'essere compreso tra 1 e 7")
+  }
+
+}
+
+const giorniSettimana = (numero) => {
+  numero = numeroIntero(numero)
+  const giorni = [null, "Lunedi", "Martedi", "Mercoledi", "Giovedi", "Venerdi", "Sabato", "Domenica"];
+  return giorni[numero]
+}
+
 /*
   5. La calcolatrice
   Scrivi un programma che dati:
@@ -121,6 +139,32 @@ const chiAzzecca = (giocatore1, giocatore2) => {
   Utilizza il costrutto Switch-Case, gestire anche il caso di operazione non valida (non presente tra le operazioni consentite).
 */
 
+const calcolatrice = (a, b, operazione) => {
+  if (typeof a !== "number" || typeof b !== "number") {
+    throw new Error("i numeri non sono validi")
+  }
+
+  if (operazione == "somma") {
+    return a + b
+  } else if (operazione == "sottrazione") {
+    return a - b
+  } else if (operazione == "moltiplicazione") {
+    return a * b
+  } else if (operazione == "divisione") {
+    return a / b
+  } else if (operazione == "modulo") {
+    return a % b
+  } else if (operazione == "potenza") {
+    return Math.pow(a, b)
+  } else if (operazione == "media") {
+    return (a + b) / 2
+  } else {
+    throw new Error("operazione non valida")
+  }
+
+}
+
+
 /*
   6. Rincorri la decina
   Scrivi un programma che che stampi i numeri da 1 a 100 andando a capo ogni 10.
@@ -140,6 +184,23 @@ const chiAzzecca = (giocatore1, giocatore2) => {
   Consiglio:
   Per andare a capo usa '\n'.
 */
+
+const generaNumeri = () => {
+  let str = "";
+  for (let i = 1; i <= 100; i++) {
+    str += `${i} `;
+    if (i % 10 === 0) {
+      str += "\n";
+    }
+  }
+  console.log(str);
+}
+
+generaNumeri();
+
+
+
+
 
 /*
   7. Vinci tu!
