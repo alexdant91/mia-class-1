@@ -8,7 +8,7 @@
 
     Input: numero = 245
     Output: 3 cifre
-*/
+
 
 const numLen = (num) => {
   if (typeof num !== "number" && num > 9999 && num != Number.isInteger(num)) {
@@ -31,7 +31,7 @@ const numLen = (num) => {
     Output: Numero casuale generato = 7
             "Nessuno dei due ha azzeccato il numero casuale, ma il giocatore 1 si è avvicinato di più!"
 
-*/
+
 
 let random = (Math.random() * (100-1) + 1) ; 
 random = Math.floor(random);
@@ -96,7 +96,7 @@ function giocatori(a , b ) {
     - 0 Se A e B sono equidistanti da N
     - 1 Se B è più vicino a N rispetto ad A
     - -1 Se A è più vicino a N rispetto a B
-*/
+
 
 function numeri(a, b, n) {
   if(a > n && b > n) {
@@ -147,7 +147,7 @@ function numeri(a, b, n) {
         ...
         7 = Domenica
   - nel caso il giorno non sia compreso nel range, la funzione dovrà restituire un messaggio d'errore simile a questo: 'Peccato, non posso indovinare il giorno.'
-*/
+
 function verifica(a) {
   let n = 0;
   do {
@@ -215,7 +215,7 @@ if(verifica(a) == true) {
 
 
   Utilizza il costrutto Switch-Case, gestire anche il caso di operazione non valida (non presente tra le operazioni consentite).
-*/
+
 
 function calcolatrice(operation , a, b) {
   switch(operation) {
@@ -250,7 +250,7 @@ function calcolatrice(operation , a, b) {
     default : console.log("operazione non valida (non presente tra le operazioni consentite)");
   }
 }
-
+*/
 
 /*
   6. Rincorri la decina
@@ -270,14 +270,18 @@ function calcolatrice(operation , a, b) {
 
   Consiglio:
   Per andare a capo usa '\n'.
-*/
 
-let i = 0;
-let n = 0;
 
-for(i = 0, i < 100, i++) {
-  
-}
+function numeri() {
+  let str = "";
+  for(i = 1; i < 101 ;i++) {
+    str += `${i} `;
+    if(i % 10 === 0) {
+      str += "\n";
+    }
+  }
+  console.log(str);
+} 
 
 /*
   7. Vinci tu!
@@ -292,6 +296,30 @@ for(i = 0, i < 100, i++) {
   Consigli:
   Il numero casuale generato, deve essere convertito nel tuo intervallo (min = 1, max = 6).
 */
+
+let score1 = 0;
+let score2 = 0;
+let player1, player2;
+
+function tiri(n) {
+  while(n > 0) {
+    player1 = Math.floor(Math.random() * 6) + 1;
+    player2 = Math.floor(Math.random() * 6) + 1;
+    
+    score1 = score1 + player1;
+    score2 = score2 + player2;
+  n--;
+  }
+  if(score1 > score2){
+    console.log("winner player1:" + score1)
+  } else if(score1 < score2){
+    console.log("winner player2:" + score2)
+  } else {
+    console.log("Tie score")
+  }
+}
+
+tiri(2);
 
 /*
   8. Ti ricordi le tabelline?
