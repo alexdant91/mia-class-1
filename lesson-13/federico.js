@@ -129,6 +129,16 @@ if(giocatore1 === numRandom) {
         7 = Domenica
   - nel caso il giorno non sia compreso nel range, la funzione dovrà restituire un messaggio d'errore simile a questo: 'Peccato, non posso indovinare il giorno.'
 */
+function verificaGiorno(num) {
+  numVerificato = num >= 1 && num <= 7;
+  return numVerificato
+};
+console.log(verificaGiorno(5));
+/*function giornoDellaSettimana(numVerificato) {
+  if(numVerificato === true) {
+
+  }
+}*/
 
 /*
   5. La calcolatrice
@@ -146,8 +156,7 @@ if(giocatore1 === numRandom) {
     potenza
     media
 
-
-  Esempi:
+ Esempi:
     Input: a = 5, b = 6, operazione = "somma"
     Output: 11
 
@@ -158,6 +167,15 @@ if(giocatore1 === numRandom) {
   Utilizza il costrutto Switch-Case, gestire anche il caso di operazione non valida (non presente tra le operazioni consentite).
 */
 
+const calcolatrice = (num1, num2, operazione) => {
+  switch(operazione) {
+    case "somma" : return num1 + num2;
+    case "sottrazione" : return num1 - num2;
+    case "moltiplicazione" : return num1 * num2;
+    case "divisione" : return num1 / num2;
+  }
+};
+console.log(calcolatrice(5,2,"sottrazione"));
 /*
   6. Rincorri la decina
   Scrivi un programma che che stampi i numeri da 1 a 100 andando a capo ogni 10.
@@ -178,12 +196,14 @@ if(giocatore1 === numRandom) {
   Per andare a capo usa '\n'.
 */
 const calculator = () => {
+  let strCalcolatrice = "";
   for(i = 0; i <= 100; i++){
-  console.log(i + " ");
+    strCalcolatrice += `${i} `;
   if(i % 10 === 0) {
-    console.log("\n");
+    strCalcolatrice += "\n";
   }
  }
+ console.log(strCalcolatrice);
 };
 console.log(calculator());
  
