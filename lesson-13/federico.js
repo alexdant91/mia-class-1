@@ -134,11 +134,11 @@ function verificaGiorno(num) {
   return numVerificato
 };
 console.log(verificaGiorno(5));
-/*function giornoDellaSettimana(numVerificato) {
+function giornoDellaSettimana(numVerificato) {
   if(numVerificato === true) {
 
   }
-}*/
+}
 
 /*
   5. La calcolatrice
@@ -168,6 +168,7 @@ console.log(verificaGiorno(5));
 */
 
 const calcolatrice = (num1, num2, operazione) => {
+  if (typeof num1 === "number" && num2 === "number" ){
   switch(operazione) {
     case "somma" : 
       return num1 + num2;
@@ -180,6 +181,7 @@ const calcolatrice = (num1, num2, operazione) => {
     default:
       alert('Operazione non valida');
   }
+}
 };
 
 console.log(calcolatrice(5,2,"sottrazione"));
