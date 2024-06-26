@@ -175,6 +175,19 @@ const guessWeekDay = (dn) => {
     Per andare a capo usa '\n'.
 */
 
+/**
+ * Out numbers from 1 to 100 with a '\n' every 10
+ * @returns 
+ */
+const outWithSpaceEvery10 = () => {
+  let output = ""
+  for(i = 1; i <= 100; i++) {
+    output += `${i} `;
+    if(i % 10 === 0) output += "\n";
+  }
+  return output;
+};
+
 /*
     7. Vinci tu!
     Scrivi un programma che dato il numero dei tiri da effettuare per ciascun giocatore (N),
