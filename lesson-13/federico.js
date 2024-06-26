@@ -169,12 +169,19 @@ console.log(verificaGiorno(5));
 
 const calcolatrice = (num1, num2, operazione) => {
   switch(operazione) {
-    case "somma" : return num1 + num2;
-    case "sottrazione" : return num1 - num2;
-    case "moltiplicazione" : return num1 * num2;
-    case "divisione" : return num1 / num2;
+    case "somma" : 
+      return num1 + num2;
+    case "sottrazione" : 
+      return num1 - num2;
+    case "moltiplicazione" : 
+      return num1 * num2;
+    case "divisione" :
+      return num1 / num2;
+    default:
+      alert('Operazione non valida');
   }
 };
+
 console.log(calcolatrice(5,2,"sottrazione"));
 /*
   6. Rincorri la decina
