@@ -218,7 +218,7 @@ generaNumeri();
 
 
 const tiraDadi = () =>{
-  return Math.floor(Math.random() * 6);
+  return Math.floor(Math.random() * 5) + 1;
 }
 
 const punteggioDadi = (N) => {
@@ -251,8 +251,8 @@ if(punteggioGiocatore1 > punteggioGiocatore2){
 
 function generaTabellina(numero) {
   const tabellina = [];
-  for (let i = 1; i <= 10; i++) {
-    tabellina.push(`${numero} x ${i}`);
+  for (let i = 0; i <= 10; i++) {
+    tabellina.push(numero * i);
   }
   return tabellina;
 }
