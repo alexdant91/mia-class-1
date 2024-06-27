@@ -295,7 +295,7 @@ function numeri() {
 
   Consigli:
   Il numero casuale generato, deve essere convertito nel tuo intervallo (min = 1, max = 6).
-*/
+
 
 let score1 = 0;
 let score2 = 0;
@@ -329,6 +329,16 @@ tiri(2);
     Input: 5
     Output: 0 5 10 15 20 25 30 35 40 45 50
 */
+
+const numero = (n) => {
+  let str = "";
+  let number = 0;
+  for(i = 0; i === n; i++){
+    number = number + n;
+    str += `${number} `;
+  }
+  console.log("0" + str);
+}
 
 /*
   9. La mia rubrica
