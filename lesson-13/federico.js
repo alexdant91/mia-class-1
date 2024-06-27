@@ -130,15 +130,22 @@ if(giocatore1 === numRandom) {
   - nel caso il giorno non sia compreso nel range, la funzione dovrà restituire un messaggio d'errore simile a questo: 'Peccato, non posso indovinare il giorno.'
 */
 function verificaGiorno(num) {
-  numVerificato = num >= 1 && num <= 7;
-  return numVerificato
+  if(typeof num !== "number"){
+  return false;
+}
+return  num >= 1 && num <= 7; 
 };
 console.log(verificaGiorno(5));
-function giornoDellaSettimana(numVerificato) {
-  if(numVerificato === true) {
 
+ giornoDellaSettimana = (num) => {
+  if(verificaGiorno(num)){
+  const settimana = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"];
+  return settimana[num - 1];
+} else {
+    return "Peccato, non posso indovinare il giorno.";
   }
 }
+console.log(giornoDellaSettimana(5));
 
 /*
   5. La calcolatrice
@@ -168,7 +175,9 @@ function giornoDellaSettimana(numVerificato) {
 */
 
 const calcolatrice = (num1, num2, operazione) => {
-  if (typeof num1 === "number" && num2 === "number" ){
+  if (typeof num1 !== "number" || typeof num2 !== "number" && typeof operazione !== "string"){
+    throw new Error(alert("quelli selezionati non sono numeri"));
+  }
   switch(operazione) {
     case "somma" : 
       return num1 + num2;
@@ -178,10 +187,16 @@ const calcolatrice = (num1, num2, operazione) => {
       return num1 * num2;
     case "divisione" :
       return num1 / num2;
+    case "modulo" :
+      return num1 % num2;
+    case "percentuale" :
+      return Math.pow(num1, num2);
+    case "media" : 
+      return (num1 + num2) / 2; 
     default:
       alert('Operazione non valida');
   }
-}
+
 };
 
 console.log(calcolatrice(5,2,"sottrazione"));
@@ -230,6 +245,33 @@ console.log(calculator());
   Il numero casuale generato, deve essere convertito nel tuo intervallo (min = 1, max = 6).
 */
 
+const numeroDado = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;      //floor = numero intero; random = numero randomico; * (max - min + 1)); + min = l'estrazione di Math.random partirà così dal numero 1 e non da 0
+};
+
+const totPuntiGamer =(tiriGamer) => {
+  let punteggio = 0;
+  for(i = 0; i < tiriGamer; i ++) {
+    punteggio += numeroDado(1, 6);                              //i valori da attribuire per capire il range su cui estrarre il numero nella funzione numeroDado
+  }
+  return punteggio;
+}
+
+let numeroTiri = 3;
+
+let gamer1 = totPuntiGamer(numeroTiri);
+let gamer2 = totPuntiGamer(numeroTiri);
+
+console.log("Punteggio Giocatore 1: " + gamer1);
+console.log("Punteggio Giocatore 2: " + gamer2);
+
+if(gamer1 > gamer2) {
+  console.log("Il Giocatore 1 vince!");
+}else if(gamer1 < gamer2) {
+  console.log("Il Giocatore 2 vince!");
+}else {
+  console.log("Pareggiooo!");
+}
 /*
   8. Ti ricordi le tabelline?
   Scrivi un programma che dato un numero stampi la tabellina corrispondente.
@@ -239,6 +281,16 @@ console.log(calculator());
     Output: 0 5 10 15 20 25 30 35 40 45 50
 */
 
+let numeroTabellina = parseInt(prompt("inserisci un numero: "));
+
+if(isNaN(numeroTabellina)){
+  alert("inserire un numero valido");
+}else{
+  for(i = 0; i <= 10; i ++) {
+    let risultato =[ i * numeroTabellina];
+    document.write(risultato);
+  }
+};
 /*
   9. La mia rubrica
   Scrivi un programma per la gestione di una rubrica telefonica.
