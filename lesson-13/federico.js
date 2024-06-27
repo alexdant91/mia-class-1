@@ -246,12 +246,12 @@ console.log(calculator());
 */
 
 const numeroDado = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;      //floor = numero intero; random = numero randomico; * (max - min + 1)); + min = l'estrazione di Math.random partirà così dal numero 1 e non da 0
+  return Math.floor(Math.random() * (max - min )) + min;      //floor = numero intero; random = numero randomico; * (max - min )); + min = l'estrazione di Math.random partirà così dal numero 1 e non da 0
 };
 
 const totPuntiGamer =(tiriGamer) => {
   let punteggio = 0;
-  for(i = 0; i < tiriGamer; i ++) {
+  for(let i = 0; i < tiriGamer; i ++) {
     punteggio += numeroDado(1, 6);                              //i valori da attribuire per capire il range su cui estrarre il numero nella funzione numeroDado
   }
   return punteggio;
@@ -281,13 +281,14 @@ if(gamer1 > gamer2) {
     Output: 0 5 10 15 20 25 30 35 40 45 50
 */
 
-let numeroTabellina = parseInt(prompt("inserisci un numero: "));
+let numeroTabellina = parseInt(prompt("inserisci un numero: "));          //parseInt 
 
 if(isNaN(numeroTabellina)){
   alert("inserire un numero valido");
 }else{
-  for(i = 0; i <= 10; i ++) {
-    let risultato =[ i * numeroTabellina];
+  let risultato =[ ];
+  for(let i = 0; i <= 10; i ++) {
+    risultato.push(i * numeroTabellina);
     document.write(risultato);
   }
 };
