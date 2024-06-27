@@ -15,13 +15,15 @@
  * @param {number} num 
  * @returns {number} digits count
  */
-const countDigits = (num) => {
-    if (typeof num !== "number" || num > 9999) {
-        throw new Error(`num must be a valid number (got ${typeof num}) lower than 9999`);
-    }
+const countDigits = num => {
+  if (typeof num !== 'number' || num > 9999) {
+    throw new Error (
+      `num must be a valid number (got ${typeof num}) lower than 9999`
+    );
+  }
 
-    return num.toString().length;
-}
+  return num.toString ().length;
+};
 
 /*
     2. Chi l'azzecca?
@@ -50,21 +52,21 @@ const countDigits = (num) => {
  * @returns {string} Result of the game
  */
 const guessNumnber = (num1, num2) => {
-    if (num1 == num2) throw new Error("Players must guess a different number");
-    
-    const MAX_NUMBER = 100;
-    const randomNumber = Math.floor(Math.random() * (MAX_NUMBER - 1)) + 1;
+  if (num1 == num2) throw new Error ('Players must guess a different number');
 
-    if (num1 == randomNumber) return "Player 1 win";
-    if (num2 == randomNumber) return "Player 2 win";
+  const MAX_NUMBER = 100;
+  const randomNumber = Math.floor (Math.random () * (MAX_NUMBER - 1)) + 1;
 
-    const d1 = Math.abs(randomNumber - num1);
-    const d2 = Math.abs(randomNumber - num2);
+  if (num1 == randomNumber) return 'Player 1 win';
+  if (num2 == randomNumber) return 'Player 2 win';
 
-    if (d1 > d2) return "Player 2 is nearest than player 1";
-    if (d2 > d1) return "Player 1 is nearest than player 2";
-    else return "Player 1 and Player 2 are at the same distance";
-}
+  const d1 = Math.abs (randomNumber - num1);
+  const d2 = Math.abs (randomNumber - num2);
+
+  if (d1 > d2) return 'Player 2 is nearest than player 1';
+  if (d2 > d1) return 'Player 1 is nearest than player 2';
+  else return 'Player 1 and Player 2 are at the same distance';
+};
 
 /*
     3. Fai il sensitivo
@@ -89,16 +91,16 @@ const guessNumnber = (num1, num2) => {
  * @param {number} b Player 2 guessed number
  * @returns {number} If player 1 return -1, if player 2 return 1, else return 0
  */
-const calculateDistance = (n) => (a, b) => {
-    if (a == b) throw new Error("a and b can't be equal");
+const calculateDistance = n => (a, b) => {
+  if (a == b) throw new Error ("a and b can't be equal");
 
-    const da = Math.abs(a - n);
-    const db = Math.abs(b - n);
+  const da = Math.abs (a - n);
+  const db = Math.abs (b - n);
 
-    if (da < db) return -1;
-    if (da > db) return 1;
-    return 0;
-}
+  if (da < db) return -1;
+  if (da > db) return 1;
+  return 0;
+};
 
 /*
     4. Indovina il giorno
@@ -119,13 +121,30 @@ const calculateDistance = (n) => (a, b) => {
  * @param {number} dn Range day number from 1 to 7
  * @returns {string} Name of week day selected (dn)
  */
-const guessWeekDay = (dn) => {
-    if (!dn || typeof dn !== "number" || !Number.isInteger(dn) || dn < 1 || dn > 7) {
-        throw new Error(`dn must be a valid integer (got ${typeof dn}) greater than 1 and lower than 7`);
-    }
+const guessWeekDay = dn => {
+  if (
+    !dn ||
+    typeof dn !== 'number' ||
+    !Number.isInteger (dn) ||
+    dn < 1 ||
+    dn > 7
+  ) {
+    throw new Error (
+      `dn must be a valid integer (got ${typeof dn}) greater than 1 and lower than 7`
+    );
+  }
 
-    return [null, "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"][dn];
-}
+  return [
+    null,
+    'Lunedì',
+    'Martedì',
+    'Mercoledì',
+    'Giovedì',
+    'Venerdì',
+    'Sabato',
+    'Domenica',
+  ][dn];
+};
 
 /*
     5. La calcolatrice
@@ -155,6 +174,64 @@ const guessWeekDay = (dn) => {
     Utilizza il costrutto Switch-Case, gestire anche il caso di operazione non valida (non presente tra le operazioni consentite).
 */
 
+/**
+ * Calculator for different operations
+ * @param {string} operation 
+ * @param {number} n1 
+ * @param {number} n2 
+ * @returns {number}
+ */
+const calculator = (operation, n1, n2) => {
+  const DEFAULT_OPERATIONS = [
+    'SUM',
+    'REMOVE',
+    'MULTIPLY',
+    'DIVIDE',
+    'MODULE',
+    'POW',
+    'AVERAGE',
+  ];
+
+  operation = operation.toUpperCase ();
+
+  if (
+    !operation ||
+    n1 === undefined ||
+    n1 === null ||
+    n2 === undefined ||
+    n2 === null ||
+    typeof operation !== 'string' ||
+    isNaN (n1) ||
+    isNaN (n2) ||
+    !DEFAULT_OPERATIONS.includes (operation)
+  ) {
+    throw new Error (
+      'operation must be a valid string, n1 and n2 must be valid number'
+    );
+  }
+
+  switch (operation) {
+    case 'SUM':
+      return n1 + n2;
+    case 'REMOVE':
+      return n1 - n2;
+    case 'MULTIPLY':
+      return n1 * n2;
+    case 'DIVIDE':
+      return n1 / n2;
+    case 'MODULE':
+      if (!Number.isInteger (n1) || !Number.isInteger (n2))
+        throw new Error ('n1 and n2 must be integer for module operation');
+      return n1 % n2;
+    case 'POW':
+      return Math.pow (n1, n2);
+    case 'AVERAGE':
+      return (n1 + n2) / 2;
+    default:
+      throw new Error ('Operation not accepted');
+  }
+};
+
 /*
     6. Rincorri la decina
     Scrivi un programma che che stampi i numeri da 1 a 100 andando a capo ogni 10.
@@ -180,10 +257,10 @@ const guessWeekDay = (dn) => {
  * @returns 
  */
 const outWithSpaceEvery10 = () => {
-  let output = ""
-  for(i = 1; i <= 100; i++) {
+  let output = '';
+  for (i = 1; i <= 100; i++) {
     output += `${i} `;
-    if(i % 10 === 0) output += "\n";
+    if (i % 10 === 0) output += '\n';
   }
   return output;
 };
@@ -202,6 +279,36 @@ const outWithSpaceEvery10 = () => {
     Il numero casuale generato, deve essere convertito nel tuo intervallo (min = 1, max = 6).
 */
 
+/**
+ * Roll the dice with 2 players and calculate who win
+ * @param {number} n Numbers of rolls
+ * @returns 
+ */
+const rollTheDice = (n) => {
+  if (!n || isNaN (n) || !Number.isInteger(n)) {
+    throw new Error ('n must be a valid integer number');
+  }
+  const p1 = [], p2 = [];
+
+  const arrayRange = (n) => Array.from(new Array(n));
+
+  arrayRange(n).forEach(() => {
+    p1.push(Math.round(Math.random() * 5) + 1);
+    p2.push(Math.round(Math.random() * 5) + 1);
+  });
+
+  const p1r = p1.reduce((a, c) => a + c, 0);
+  const p2r = p2.reduce((a, c) => a + c, 0);
+
+  if (p1r > p2r) {
+    return "Player 1 win";
+  } else if (p1r < p2r) {
+    return "Player 2 win";
+  } else {
+    return "It's a draw";
+  }
+};
+
 /*
     8. Ti ricordi le tabelline?
     Scrivi un programma che dato un numero stampi la tabellina corrispondente.
@@ -210,6 +317,8 @@ const outWithSpaceEvery10 = () => {
       Input: 5
       Output: 0 5 10 15 20 25 30 35 40 45 50
 */
+
+
 
 /*
     9. La mia rubrica
