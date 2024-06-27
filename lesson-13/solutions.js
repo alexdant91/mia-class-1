@@ -284,26 +284,26 @@ const outWithSpaceEvery10 = () => {
  * @param {number} n Numbers of rolls
  * @returns 
  */
-const rollTheDice = (n) => {
-  if (!n || isNaN (n) || !Number.isInteger(n)) {
+const rollTheDice = n => {
+  if (!n || isNaN (n) || !Number.isInteger (n)) {
     throw new Error ('n must be a valid integer number');
   }
   const p1 = [], p2 = [];
 
-  const arrayRange = (n) => Array.from(new Array(n));
+  const arrayRange = n => Array.from (new Array (n));
 
-  arrayRange(n).forEach(() => {
-    p1.push(Math.round(Math.random() * 5) + 1);
-    p2.push(Math.round(Math.random() * 5) + 1);
+  arrayRange (n).forEach (() => {
+    p1.push (Math.round (Math.random () * 5) + 1);
+    p2.push (Math.round (Math.random () * 5) + 1);
   });
 
-  const p1r = p1.reduce((a, c) => a + c, 0);
-  const p2r = p2.reduce((a, c) => a + c, 0);
+  const p1r = p1.reduce ((a, c) => a + c, 0);
+  const p2r = p2.reduce ((a, c) => a + c, 0);
 
   if (p1r > p2r) {
-    return "Player 1 win";
+    return 'Player 1 win';
   } else if (p1r < p2r) {
-    return "Player 2 win";
+    return 'Player 2 win';
   } else {
     return "It's a draw";
   }
@@ -318,7 +318,14 @@ const rollTheDice = (n) => {
       Output: 0 5 10 15 20 25 30 35 40 45 50
 */
 
-
+/**
+ * Get table numbers
+ * @param {number} n 
+ * @returns {number[]}
+ */
+const tables = n => {
+  return Array.from (new Array (n)).map ((_, i) => n * i);
+};
 
 /*
     9. La mia rubrica
@@ -327,8 +334,8 @@ const rollTheDice = (n) => {
     Definisci un oggetto che rappresenti un contatto e, visto che stai diventando bravo/a, le proprietà dell'oggetto sono a tua discrizione.
     L'unico vincolo che hai è di inserire almeno il nome e il numero di telefono come stringhe.
   
-    Definisci un altro oggetto che rappresenti la lista dei contatti, quindi sarà formato da un array di contatti.
-    Implementa i metodi dell'oggetto per le seguenti operazioni:
+    Definisci un array che rappresenti la lista dei contatti.
+    Implementa i metodi dell'array per le seguenti operazioni:
         - Visualizzazione dell'intera lista contatti
         - Inserimento di un nuovo contatto
         - Modifica di uno contatto passando in input l'indice dell'array
@@ -339,6 +346,69 @@ const rollTheDice = (n) => {
     Migliora i metodi di Modifica e Cancellazione, al posto di prendere in input l'indice dell'array passa in input il nome
     e ricava l'indice sul quale applicare l'operazione.
 */
+
+/**
+ * Manage a phonebook
+ * @returns {Object<string, function>}
+ */
+const managePhonebook = () => {
+  const contacts = [
+    {name: 'Alex', tel: '3333333333'},
+    {name: 'Alex', tel: '3333333337'},
+    {name: 'Federico', tel: '3333333334'},
+    {name: 'Sabrina', tel: '3333333335'},
+    {name: 'Alessandro', tel: '3333333336'},
+  ];
+
+  // Visualizzazione dell'intera lista contatti
+  const getAll = () => {
+    return contacts;
+  };
+  // Inserimento di un nuovo contatto
+  const create = contact => {
+    if (Array.isArray(contact) || typeof contact !== 'object') {
+      throw new Error ('contact must be a valid object');
+    }
+
+    if (contacts.findIndex (c => c.tel == contact.tel) === -1) {
+      contacts.push (contact);
+    }
+  };
+  // Modifica di un contatto passando in input l'indice dell'array
+  const edit = (index, data) => {
+    if (Array.isArray(data) || typeof data !== 'object') {
+      throw new Error ('contact must be a valid object');
+    }
+    if (!Number.isInteger(index)) {
+      throw new Error("index must be an integer");
+    }
+
+    contacts[index] = { ...contacts[index], ...data };
+  }
+  // Cancellazione di un contatto passando in input l'indice dell'array
+  const remove = (index) => {
+    if (!Number.isInteger(index)) {
+      throw new Error("index must be an integer");
+    }
+
+    contacts.splice(index, 1);
+  }
+  // Ricerca passando il nome e restituendo il singolo contatto.
+  const search = (name) => { // RegExp();
+    return contacts.filter((contact) => {
+      const serchRegExp = new RegExp(name, "ig");
+      return contact.name.match(serchRegExp)
+    });
+  }
+
+  return {
+    getAll,
+    create,
+    edit,
+    remove,
+    search,
+  }
+};
 
 /*
     10 Tanti numeri
@@ -352,3 +422,53 @@ const rollTheDice = (n) => {
     Variante:
     Stampa anche quanti sono i valori monori della media e quanti quelli maggiori.
 */
+
+const calculateAverage = numbers => {
+  if (
+    !numbers ||
+    !Array.isArray (numbers) ||
+    numbers.some (n => typeof n !== 'number')
+  ) {
+    throw new Error ('numbers must be a valid array of numbers');
+  }
+
+  const average = numbers.reduce ((a, c) => a + c, 0) / numbers.length;
+
+  return {
+    average,
+    lowerValues: numbers.filter (n => n < average),
+  };
+};
+
+/**
+ * Crea una funzione per gestire un array di utenti
+ * 
+ * Funzionalità:
+ * 
+ *  - Ottenere tutti gli utenti
+ *  - Creare un utente
+ *  - Modificare un utente
+ *  - Eliminare un utente
+ *  - Cercare un utente in base al nome o al cognome
+ * 
+ */
+
+const manageUsers = () => {
+  const users = [
+    { full_name : "Alessandro D'Antoni", email: "alexdant91@gmail.com", password: "123456", age: 33 },
+  ]
+
+  // Ottenere tutti gli utenti
+  const getAll = () => {}
+  // Creare un utente
+  const create = () => {}
+  // Modificare un utente
+  const edit = () => {}
+  // Eliminare un utente
+  const remove = () => {}
+  // Cercare un utente in base al nome o al cognome
+  const search = () => {}
+
+  // Restituisci un oggetto con tutte le funzioni
+  return {}
+}
