@@ -216,6 +216,30 @@ generaNumeri();
   Il numero casuale generato, deve essere convertito nel tuo intervallo (min = 1, max = 6).
 */
 
+
+const tiraDadi = () =>{
+  return Math.floor(Math.random() * 6);
+}
+
+const punteggioDadi = (N) => {
+  let punteggioGiocatore1 = 0;
+  let punteggioGiocatore2 = 0;
+
+  for (let i = 0; i < N; i++) {
+    punteggioGiocatore1 += tiraDadi();
+    punteggioGiocatore2 += tiraDadi();
+}
+
+if(punteggioGiocatore1 > punteggioGiocatore2){
+  console.log("ha vinto il giocatore 1")
+}else if(punteggioGiocatore2 > punteggioGiocatore1){
+  console.log("ha vinto il giocatore 2")
+}else{
+  console.log("non ha vinto nessuno")
+}
+}
+ console.log()
+
 /*
   8. Ti ricordi le tabelline?
   Scrivi un programma che dato un numero stampi la tabellina corrispondente.
@@ -224,6 +248,16 @@ generaNumeri();
     Input: 5
     Output: 0 5 10 15 20 25 30 35 40 45 50
 */
+
+function generaTabellina(numero) {
+  const tabellina = [];
+  for (let i = 1; i <= 10; i++) {
+    tabellina.push(`${numero} x ${i}`);
+  }
+  return tabellina;
+}
+
+
 
 /*
   9. La mia rubrica
