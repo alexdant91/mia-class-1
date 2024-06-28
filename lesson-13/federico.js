@@ -255,6 +255,7 @@ const totPuntiGamer =(tiriGamer) => {
     punteggio += numeroDado(1, 6);                              //i valori da attribuire per capire il range su cui estrarre il numero nella funzione numeroDado
   }
   return punteggio;
+
 }
 
 let numeroTiri = 3;
@@ -281,7 +282,9 @@ if(gamer1 > gamer2) {
     Output: 0 5 10 15 20 25 30 35 40 45 50
 */
 
-let numeroTabellina = parseInt(prompt("inserisci un numero: "));          //parseInt 
+
+/*
+let numeroTabellina = parseInt(prompt("inserisci un numero: "));          //parseInt ci restituirà la stringa contenente sotto forma di numero 
 
 if(isNaN(numeroTabellina)){
   alert("inserire un numero valido");
@@ -291,7 +294,10 @@ if(isNaN(numeroTabellina)){
     risultato.push(i * numeroTabellina);
     document.write(risultato);
   }
-};
+};*/
+
+
+
 /*
   9. La mia rubrica
   Scrivi un programma per la gestione di una rubrica telefonica.
@@ -312,6 +318,69 @@ if(isNaN(numeroTabellina)){
   e ricava l'indice sul quale applicare l'operazione.
 */
 
+/**/
+
+const managePhonebook = () => {
+  const contacts = [
+    {name: 'Alex', tel: '3333333333'},
+    {name: 'Alex', tel: '3333333337'},
+    {name: 'Federico', tel: '3333333334'},
+    {name: 'Sabrina', tel: '3333333335'},
+    {name: 'Alessandro', tel: '3333333336'},
+  ];
+
+  // Visualizzazione dell'intera lista contatti
+  const getAll = () => {
+    return contacts;
+  };
+  // Inserimento di un nuovo contatto
+  const create = contact => {
+    if (Array.isArray(contact) || typeof contact !== 'object') {
+      throw new Error ('contact must be a valid object');
+    }
+
+    if (contacts.findIndex (c => c.tel == contact.tel) === -1) {
+      contacts.push (contact);
+    }
+  };
+  // Modifica di un contatto passando in input l'indice dell'array
+  const edit = (index, data) => {
+    if (Array.isArray(data) || typeof data !== 'object') {
+      throw new Error ('contact must be a valid object');
+    }
+    if (!Number.isInteger(index)) {
+      throw new Error("index must be an integer");
+    }
+
+    contacts[index] = { ...contacts[index], ...data };
+  }
+  // Cancellazione di un contatto passando in input l'indice dell'array
+  const remove = (index) => {
+    if (!Number.isInteger(index)) {
+      throw new Error("index must be an integer");
+    }
+
+    contacts.splice(index, 1);
+  }
+  // Ricerca passando il nome e restituendo il singolo contatto.
+  const search = (name) => { // RegExp();
+    return contacts.filter((contact) => {
+      const serchRegExp = new RegExp(name, "ig");
+      return contact.name.match(serchRegExp)
+    });
+  }
+
+  return {
+    getAll,
+    create,
+    edit,
+    remove,
+    search,
+  }
+};
+
+
+
 /*
   10 Tanti numeri
   Scrivi un programma che dato array di numeri, calcoli la media dei valori e
@@ -325,4 +394,84 @@ if(isNaN(numeroTabellina)){
   Stampa anche quanti sono i valori monori della media e quanti quelli maggiori.
 */
 
+const mediaValori = (arr) => {
+
+  let sum =  arr.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+  const media = sum / arr.length;
+
+  const valoriMinori = arr.filter(num => num < media);
+
+  return {media, valoriMinori};
+};
+
+const a = [3, 5, 10, 2, 8];
+const risultato = mediaValori(a);
+console.log(`media = ${risultato.media}, valori minori = [${risultato.valoriMinori.join(', ')}]`);
+
+/**
+ * Crea una funzione per gestire un array di utenti
+ * 
+ * Funzionalità:
+ * 
+ *  - Ottenere tutti gli utenti
+ *  - Creare un utente
+ *  - Modificare un utente
+ *  - Eliminare un utente
+ *  - Cercare un utente in base al nome o al cognome
+ * 
+ */
+
+const manageUsers = () => {
+  const users = [
+    { full_name : "Alessandro D'Antoni", email: "alexdant91@gmail.com", password: "123456", age: 33 },
+  ]
+
+  // Ottenere tutti gli utenti
+  const getAll = () => {
+    return users;
+  }
+  // Creare un utente
+  const create = (users) => {
+    if(Array.isArray(users) || typeof users !== "object") {
+      throw new Error("dev'essere un utente valido");
+    }
+    if(users.findIndex (u => u.email == users.email) === -1){
+      users.push(contact);
+    }
+  }
+  // Modificare un utente
+  const edit = (index, datoNuovo) => {
+    if(Array.isArray(datoNuovo) || typeof datoNuovo !== "object"){
+      throw new Error("dato non valido");
+    }
+    if (!Number.isInteger(index)) {
+      throw new Error('index non è un numero');
+    }
+    users[index] = {...users[index], ...datoNuovo}; 
+  }
+  // Eliminare un utente
+  const remove = (index) => {
+    if (!Number.isInteger(index)) {
+      throw new Error('index non è un numero');
+    }
+    users.splice(index, 1);
+  }
+  // Cercare un utente in base al nome o al cognome
+  const search = (full_name) => {
+    return users.filter((user) => {
+      const serchRegExp = new RegExp(full_name, "ig");
+      return user.full_name.match(serchRegExp);
+    });
+  };
+
+  // Restituisci un oggetto con tutte le funzioni
+  return {
+    getAll,
+    create,
+    edit,
+    remove,
+    search
+  }
+};
 
