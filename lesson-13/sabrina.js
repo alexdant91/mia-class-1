@@ -254,8 +254,7 @@ function generaTabellina(numero) {
   for (let i = 0; i <= 10; i++) {
     tabellina.push(numero * i);
   }
-  return tabellina;
-}
+  return tabellina;}
 
 
 
@@ -279,6 +278,7 @@ function generaTabellina(numero) {
   e ricava l'indice sul quale applicare l'operazione.
 */
 
+
 /*
   10 Tanti numeri
   Scrivi un programma che dato array di numeri, calcoli la media dei valori e
@@ -291,3 +291,32 @@ function generaTabellina(numero) {
   Variante:
   Stampa anche quanti sono i valori monori della media e quanti quelli maggiori.
 */
+const calcolaMedia = (array) => {
+  const somma = array.reduce((acc, val) => acc + val);
+  const media = somma / array.length
+
+  const valoriMinori = array.filter(val => val < media);
+  return {media, valoriMinori}
+}
+
+
+const manageUsers = () => {
+  const users = [
+    { full_name : "Alessandro D'Antoni", email: "alexdant91@gmail.com", password: "123456", age: 33 },
+  ]
+
+
+  
+  // Ottenere tutti gli utenti
+  const getAll = () => {}
+  // Creare un utente
+  const create = () => {}
+  // Modificare un utente
+  const edit = () => {}
+  // Eliminare un utente
+  const remove = () => {}
+  // Cercare un utente in base al nome o al cognome
+  const search = () => {}
+
+  // Restituisci un oggetto con tutte le funzioni
+  return {}
