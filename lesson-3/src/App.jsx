@@ -4,6 +4,7 @@ import { API_URL_POSTS } from "./config/constants";
 import Table from "./components/Table";
 import Pagination from "./components/Pagination";
 import Limit from "./components/Limit";
+import ErrorBox from "./components/ErrorBox";
 
 const CACHE_TIMEOUT = 60000 * 30;
 
@@ -93,15 +94,12 @@ const App = () => {
         <Pagination onChange={handlePageChange} page={page} totalPages={totalPages} />
         <Limit onChange={handleLimitChange} limit={limit} />
       </div>
-      {
-        error && (
-          <div>
-            <p>Error during data fetching...</p>
-          </div>
-        )
-      }
-
-      <Table data={posts} isLoading={loading} />
+      <div>
+        <ErrorBox error={error} />
+      </div>
+      <div>
+        <Table data={posts} isLoading={loading} />
+      </div>
     </>
   )
 }
