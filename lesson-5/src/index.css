@@ -1,0 +1,11 @@
+h1, p {
+    padding: 10px;
+    background-color: transparent;
+    color: black;
+}
+
+.dark h1, 
+.dark p {
+    background-color: black;
+    color: white;
+}
