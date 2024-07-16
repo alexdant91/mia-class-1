@@ -8,7 +8,7 @@ import {DarkModeProvider} from './providers/DarkModeProvider.jsx';
 ReactDOM.createRoot (document.getElementById ('root')).render (
   <DarkModeProvider>
       <LangProvider>
-        <App />
+          <App />
       </LangProvider>
   </DarkModeProvider>
 );
